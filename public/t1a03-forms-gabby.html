@@ -1,4 +1,4 @@
-<h5>Version 0.1.7</h5>
+<h5>Version 0.1.9</h5>
   <h1 align=center>t1a03-forms-gabby.html</h1>
 <background color=black>
   <br>
@@ -21,18 +21,19 @@
     Input Hoodie image here: <input type=file><br>
     reset all information?: <input type=reset><br>
     Submit Form: <input type=submit><br>
-    
-    Button: <input type=button  value="click" onclick="{
-      document.getElementById('myArea01').value = 'clickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclickclick'
-      }"><br>
+   
     Textarea:<br>
-    <textarea id="myArea01" cols=60 rows=5 > CLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICK </textarea><br>
+    <textarea id="myArea01" cols=60 rows=5 > Please input the number of hoodies you would like ordered: </textarea><br>
+     
+    Button: <input type=button  value="click" onclick="{
+      document.getElementById('myArea01').value = 'Thank You for submitting'
+      }"><br>
     
-    Select Box:<BR>
+    Select Colour of hoodie:<BR>
     <select id="mySelect01" size=2>
-      <option value='myOne'>One
-        <option value='myTwo'>Two
-                       <option value='myThree'>Three
+      <option value='myOne'>Black
+        <option value='myTwo'>White
+                       <option value='myThree'>Gray
                        </select>
                        </form>
     </background>
