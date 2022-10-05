@@ -28,16 +28,19 @@ I do CSS inside the tag. It overpowers all other methods<br>
                                         
 <textarea style="position:relative; left:0; top:0; width:200; height:50; ">
 Advanced see if you can move this textarea</b>
-  </textarea><br>
-animation: animation1 2s ease 0s infinite reverse none;
-@keyframes animation1 {
-  0%,50%,100% {
-    opacity: 1; color: blue; 
-  }
-  25%,75% {
-    opacity: 0; color: red; 
-  }
-  
+<h2>Animation</h2>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {background-color: white;}
+  to {background-color: black;}
 }
 <hr>
 
