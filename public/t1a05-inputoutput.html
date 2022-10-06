@@ -20,10 +20,10 @@ document.getElementById('myDiv01').innterHTMl = myIn01 = ' squared = ' + myIn01*
 <input id="myNum01" type=number value="4" ><br>
 <br>
 input type=button value="myEvent squares" onclick="{
-let myIn01 = parseFloat(document.getElementbyId('myNum01').value
+  let myIn01 = parseFloat(document.getElementbyId('myNum01').value)
   let myAnswer = myIn01 * myIn01
   document.getElementbyId('myDiv01').innerHTML = 
-  myIn01 = ' squared = ' + myAnswer
+  myIn01 + ' squared = ' + myAnswer
   }"><br>
   <br>
   <div id="myDiv01">Hello World</div>
