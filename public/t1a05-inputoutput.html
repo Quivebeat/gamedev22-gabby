@@ -1,14 +1,14 @@
-<h5>Version 0.1.8
+h5>Version 0.1.8
 <br>
-<h2 align=center>t1a05: input output by Gabby<h2>
+<h2 align=center>t1a05: input output by Gabby"</h2>
 <hr>
 <br>
 <a href="https://www.w3schools.com/jsref/prop_html_innterhtml.asp">Good Reference to Input Output
-Javascript innterHTML value by Gabby</a>
+Javascript innerHTML value by Gabby</a>
 <br>
 <hr>
 <br>
-<hr4> Example of input output code</h4>
+<h4> Example of input output code</h4>
 <pre>
 let myIn01 = document.getElementById('myNum01').value
 document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*myIn01
@@ -27,7 +27,41 @@ document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*m
   }"><br>
   <br>
   <div id="myDiv01">...</div>
+  <hr>
   
+  <div id="demo"><h3>
+  EPIC GAMER CALCULATOR111!!111!
+  </h3><input type="text" id="myTextIn1" value="27" size="30">  + <input type="text" id="myTextIn2" value="64" size="30"> 
+  
+  <input id="myButton124" type="button" value="Add" onclick="{
+
+   var my1 = document.getElementById('myTextIn1').value  
+   var my2 = document.getElementById('myTextIn2').value  
+   document.getElementById('myDiv124').innerHTML =   'Numbers added as strings ' +  my1 + ' + ' +  my2 + ' = ' +  (my1 + my2)  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as integers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseInt(my1) + parseInt(my2))  + '<br>'   
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as rounded integers ' +  my1 + ' + ' +  my2 + ' = ' +  (Math.round(my1) + Math.round(my2))  + '<br>'                                                      
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added as floating point (decimal) numbers ' +  my1 + ' + ' +  my2 + ' = ' +  (parseFloat(my1) + parseFloat(my2))  + '<br>'                                         
+   document.getElementById('myDiv124').innerHTML +=  'Numbers added using *1 trick ' +  my1 + ' + ' +  my2 + ' = ' +  (my1*1 + my2*1)  + '<br>'        
+   }"><br><br>
+   <div id='myDiv124'>...</div><br>
+   <hr></div>
+  <style>
+ @keyframes morph {
+  0% { background-color: red; }
+  33% { background-color: green; }
+  66% { background-color: blue; }
+  100% { background-color: red; }
+}
+ 
+/* (A2) ATTACH SEQUENCE */
+#demo {
+ 
+  padding: 10px;
+  animation: morph 6s infinite;
+}
+</style>
+<br>
+   
   <style> 
     
     body {
@@ -38,3 +72,38 @@ document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*m
     font-family: 'VCR_OSD_MONO_1.001.ttf';
     color: white;
 }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    #Cooltext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+ 
+    h2 {
+        font-size: 5em;
+        font-family: serif;
+        color: transparent;
+        text-align: center;
+        animation: effect 2s linear infinite;
+    }
+ 
+    @keyframes effect {
+        0% {
+            background: linear-gradient(
+                #008000, #00FF00);
+            -webkit-background-clip: text;
+        }
+ 
+        100% {
+            background: linear-gradient(
+                #3CE7D7, #000FFF);
+            -webkit-background-clip: text;
+        }
+    }
+</style>
