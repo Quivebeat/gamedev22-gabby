@@ -1,7 +1,7 @@
 <h5>version 0.2.7</h5>
 <br>
 <br>
-<h1 align=center>T1A04: CSS by Gabby</h1>
+<h1 align=center><div id="rainbow">T1A04: CSS by Gabby</div></h1>
 <hr>
 <br>
 Reference link 
@@ -9,7 +9,7 @@ Reference link
 <br>
 Properly done with a .ss file listing all css commands for your website<br>
 <br>
-Another way to do SCC (Cascading Style Sheets: determine colours, locations, extra effects on the tags on your web page)<br>
+<div id="rainbow">Another way to do SCC (Cascading Style Sheets: determine colours, locations, extra effects on the tags on your web page)</div><br>
 
 Here is typical in document style
 <pre>
@@ -18,7 +18,7 @@ color: #00ff00;
 }
 </pre><br>
 <br>
-I do CSS inside the tag. It overpowers all other methods<br>
+<div id="rainbow">I do CSS inside the tag. It overpowers all other methods</div><br>
 <b> This is bold</b><br>
 <b id="myB1" style="color:#00ff00; background-Color:blue; "> This is the cool bold</b>
 <input type=button value=Change onclick="{
@@ -27,7 +27,7 @@ I do CSS inside the tag. It overpowers all other methods<br>
                                          }"><br>
                                         
 <textarea style="position:relative; left:0; top:0; width:200; height:50; ">
-  Advanced see if you can move this textarea</b></textarea><br>
+  <div id="rainbow">Advanced see if you can move this textarea</div></b></textarea><br>
 <br>
 <br>
 <hr>
@@ -42,13 +42,50 @@ div {
 }
 </style>
 <style> 
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: black;}
-}
+  
    body {
         background: linear-gradient(white, cyan, teal, green, lime, black); 
         Font-Family
         
     }
                   
+<style>
+#rainbow{
+      
+        color: transparent;
+        animation: effect 1.5s infinite;
+    }
+ 
+    @keyframes effect {
+        0% {
+            background: linear-gradient(
+                red, red, orange );
+            -webkit-background-clip: text;
+        }
+        5% { background: linear-gradient(red, orange); -webkit-background-clip: text;}
+        10% { background: linear-gradient(orange, orange); -webkit-background-clip: text;}
+        15% { background: linear-gradient(orange, orange, yellow); -webkit-background-clip: text;}
+        20% { background: linear-gradient(orange, yellow); -webkit-background-clip: text;}
+        25% { background: linear-gradient(orange, yellow, yellow); -webkit-background-clip: text;}
+        30% { background: linear-gradient(yellow, yellow); -webkit-background-clip: text;}
+        35% { background: linear-gradient(yellow, yellow, lime); -webkit-background-clip: text;}
+        40% { background: linear-gradient(yellow, lime); -webkit-background-clip: text;}
+        45% { background: linear-gradient(yellow, lime, lime); -webkit-background-clip: text;}
+        50% { background: linear-gradient(lime, lime); -webkit-background-clip: text;}
+        55% { background: linear-gradient(lime, lime, teal); -webkit-background-clip: text;}
+        60% { background: linear-gradient(lime, teal); -webkit-background-clip: text;}
+        65% { background: linear-gradient(lime, teal, teal); -webkit-background-clip: text;}
+           70% { background: linear-gradient(teal, teal); -webkit-background-clip: text;}
+           75% { background: linear-gradient(teal, teal, purple); -webkit-background-clip: text;}
+        80% { background: linear-gradient(teal, purple); -webkit-background-clip: text;}
+        85% { background: linear-gradient(teal, purple, purple); -webkit-background-clip: text;}
+          90% { background: linear-gradient(purple, purple); -webkit-background-clip: text;}
+          95% { background: linear-gradient(purple, purple, red); -webkit-background-clip: text;}
+ 
+        100% {
+            background: linear-gradient(
+                purple, red);
+            -webkit-background-clip: text;
+        }
+    }
+</style>
