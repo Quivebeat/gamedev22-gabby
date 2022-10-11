@@ -15,6 +15,7 @@ Note: Javascript does use var and let for local variables.</h3></div>
 <div id="shake">
 For Global Variables, Mr. Ellis Prefers to use document.myVarname
 </div>
+
 <style>
 
 #shake{
@@ -23,7 +24,8 @@ For Global Variables, Mr. Ellis Prefers to use document.myVarname
 }
 @keyframes shake {
    0%, 100% {transform: translateX(0);} 
-   A, 25%, 65%, 85%, 100% {transform: translateY(10px);}
+  0%, 100% {transform: translateY(0);}
+   5, 25%, 65%, 85%, 100% {transform: translateY(10px);}
       15%, 35%, 55%, 75%, 95% {transform: translateY(-10px);}
    20%, 40%, 60%, 80% {transform: translateX(10px);} 
 
