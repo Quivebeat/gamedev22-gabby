@@ -1,5 +1,5 @@
 <h5>
-Version 0.0.1
+Version 0.0.1-3
 </h5>
 <br>
 <div id="box"><h2 align=center>
@@ -36,7 +36,7 @@ document.getElementById('myDiv01').innerHTML = myIn01 = ' is greater than 3'
 <input type=button value="if-else" onclick="{
 let myIn01 = parseFloat(document.getElementById('myNum01').value)
 if (myIn01 >=3){
-document.getElementById('myDiv1').innerHTML = myIn01 = ' is greater than 3'
+document.getElementById('myDiv01').innerHTML = myIn01 = ' is greater than 3'
 } else {
 document.getElementById('myDiv01').innerHTML = myIn01 = 'is less than 3'}
 }">
@@ -52,9 +52,67 @@ document.getElementById('myDiv01').innerHTML = myIn01 = ' smol baby brain comple
 <div id="rainbow"><div id="myDiv01">
 
 [Answer is printed here]
+</div></div>
+<br>
+<br>
+<hr>
+<h2>
+Please input the mark I'll get for creating this webpage
+</h2>
+<br>
+<input id="myNum09" type=number value="0" ><br>
+<input type=button value="Enter Number" onclick="{
+let myNum09 = parseFloat(document.getElementById('myNum09').value)
+if (myNum09 >=9){
+document.getElementById('myDiv02').innerHTML = myNum09 = 'Good Answer'
+} else {
+document.getElementById('myDiv02').innerHTML = myNum09 = 'Raise it a bit more...'}
+if (myNum09 <=0)
+document.getElementById('myDiv02').innerHTML = myNum09 = 'Wrong Answer.'
+}">
+<div id="myDiv02">
+...
 </div>
-<br>
-<br>
+<style>
+#myDiv02{
+        color: transparent;
+        animation: effect 1.5s infinite;
+    }
+ 
+    @keyframes effect {
+        0% {
+            background: linear-gradient(
+                red, red, orange );
+            -webkit-background-clip: text;
+        }
+        5% { background: linear-gradient(red, orange); -webkit-background-clip: text;}
+        10% { background: linear-gradient(orange, orange); -webkit-background-clip: text;}
+        15% { background: linear-gradient(orange, orange, yellow); -webkit-background-clip: text;}
+        20% { background: linear-gradient(orange, yellow); -webkit-background-clip: text;}
+        25% { background: linear-gradient(orange, yellow, yellow); -webkit-background-clip: text;}
+        30% { background: linear-gradient(yellow, yellow); -webkit-background-clip: text;}
+        35% { background: linear-gradient(yellow, yellow, lime); -webkit-background-clip: text;}
+        40% { background: linear-gradient(yellow, lime); -webkit-background-clip: text;}
+        45% { background: linear-gradient(yellow, lime, lime); -webkit-background-clip: text;}
+        50% { background: linear-gradient(lime, lime); -webkit-background-clip: text;}
+        55% { background: linear-gradient(lime, lime, teal); -webkit-background-clip: text;}
+        60% { background: linear-gradient(lime, teal); -webkit-background-clip: text;}
+        65% { background: linear-gradient(lime, teal, teal); -webkit-background-clip: text;}
+           70% { background: linear-gradient(teal, teal); -webkit-background-clip: text;}
+           75% { background: linear-gradient(teal, teal, purple); -webkit-background-clip: text;}
+        80% { background: linear-gradient(teal, purple); -webkit-background-clip: text;}
+        85% { background: linear-gradient(teal, purple, purple); -webkit-background-clip: text;}
+          90% { background: linear-gradient(purple, purple); -webkit-background-clip: text;}
+          95% { background: linear-gradient(purple, purple, red); -webkit-background-clip: text;}
+ 
+        100% {
+            background: linear-gradient(
+                purple, red);
+            -webkit-background-clip: text;
+        }"
+    }
+</style>
+
 <style>
  body { 
   background: linear-gradient(black, red);
