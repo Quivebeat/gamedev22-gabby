@@ -9,9 +9,11 @@ Reference link
 <br>
 Properly done with a .ss file listing all css commands for your website<br>
 <br>
-<div id="rainbow">Another way to do SCC (Cascading Style Sheets: determine colours, locations, extra effects on the tags on your web page)</div><br>
+<div id="rainbow">Another way to do CSS (Cascading Style Sheets: determine colours, locations, extra effects on the tags on your web page)</div><br>
 
+<div id="move">
 Here is typical in document style
+</div>
 <pre>
 b {
 color: #00ff00;
@@ -31,10 +33,24 @@ Advanced see if you can move this textarea</textarea><br>
 <br>
 <br>
 <hr>
+<style>
+
+#move{
+  animation:move 1s infinite;
+  
+}
+@keyframes move {
+  0%, 25% {transform: translateX(50px)}
+  25%, 50% {transform: translateX(100px)}
+  
+
+} 
+
+</style>
 <style> 
   
    body {
-        background: linear-gradient(white, cyan, teal, green, lime, black); 
+        background: linear-gradient(gold, white, white, gold); 
         
     }
  
