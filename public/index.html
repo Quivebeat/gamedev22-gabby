@@ -9,33 +9,34 @@
         <li><a href="https://quivebeat.github.io/gamedev22-gabby/">The Gamedev Website Full URL</a>
            <h2 align=center><div id="rainbow">Gabby's Projects </h2></div>
             <hr>
-    <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a01-basic-web-Gabby.html">T1a01: Basic Website</a>
+    <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a01-basic-web-Gabby.html">T1a01: Basic Website</a>
         <br>
         <br>
-        <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a02-gabby.html">T1a02: Lists and Tables</a>
+        <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a02-gabby.html">T1a02: Lists and Tables</a>
             <br>
             <br>
-            <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a03-forms-gabby.html">T1a03: Forms</a>
+            <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a03-forms-gabby.html">T1a03: Forms</a>
                 <br>
                 <br>
-                <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a04-css-gabby.html">T1a04: CSS</a>
+                <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a04-css-gabby.html">T1a04: CSS</a>
                     <br>
                     <br>
-                    <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a05-inputoutput.html">T1a05: Input Output</a>
+                    <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a05-inputoutput.html">T1a05: Input Output</a>
                         <br>
                         <br>
-                        <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a06-variables.html">T1a06: Variables</a>
+                        <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a06-variables.html">T1a06: Variables</a>
                             <br>
                             <br>
-                            <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a07-decisions.html">T1a07: Decisions</a>
+                            <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a07-decisions.html">T1a07: Decisions</a>
                                 <br>
                                 <br>
-                                <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a08-loops.html">T1a08: loops</a>
-                    <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a15-review-coding-gabby.html">T1a15: Coding Review</a>
+                                <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a08-loops.html">T1a08: loops</a>
+                    <li><<div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/t1a15-review-coding-gabby.html">T1a15: Coding Review</a>
                             <br>
                             <br> 
-    <li><a href="https://quivebeat.github.io/gamedev22-gabby/public/browser/">T1a0X: Edgeimpulse</a>
-
+    <li><div id="box"><a href="https://quivebeat.github.io/gamedev22-gabby/public/browser/">T1a0X: Edgeimpulse</a>
+    </li>
+    </div>
         <br>
         <br>
         <h2><div id="rainbow"><a href="https://github.com/hpssjellis/high-school-javascript-game-dev-assignment-images">Assignments</a></h2></div>
@@ -47,12 +48,41 @@
 <style>
     body{
     
-    background: linear-gradient(black, purple, black);
+    background: linear-gradient(black, black, green, lime, green, black, black);
         text-align: center;
-        text-color: white;
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
         font-family: 'Share Tech Mono', monospace;
+        color: white;
     }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: Lime; -webkit-background-clip: text;}
+          25%, 30% { background: green; -webkit-background-clip: text;}
+          30%, 55% { background: Lime; -webkit-background-clip: text;}
+          55%, 100% { background: green; -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 5s infinite;
+    }
+    @keyframes backgroundanim {
+       0%, 1% { background-image: transparent;}
+      1%, 100% { background-image: url("https://gifimage.net/wp-content/uploads/2017/09/animated-static-gif-9.gif") ;}
+        
+    }
+    }
+
         </style>
  <style>
 #rainbow{
@@ -93,4 +123,13 @@
             -webkit-background-clip: text;
         }
     }
+</style>
+<style>
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
 </style>
