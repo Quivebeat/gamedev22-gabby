@@ -8,11 +8,13 @@ Javascript innerHTML value by Gabby</a>
 <br>
 <hr>
 <br>
+<ul>
 <h4> Example of input output code</h4>
-<pre>
+</ul>
+<div id="box"><pre>
 let myIn01 = document.getElementById('myNum01').value
 document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*myIn01
-</pre>
+</pre></div>
 <br>
 <h4> Example of Working code</h4>
 <br>
@@ -20,9 +22,9 @@ document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*m
 <input id="myNum01" type=number value="4" ><br>
 <br>
 <input type=button value="myEvent squares" onclick="{
-  let myIn01 = parseFloat(document.getElementbyId('myNum01').value
+  let myIn01 = parseFloat(document.getElementById('myNum01').value)
   let myAnswer = myIn01 * myIn01
-  document.getElementbyId('myDiv01').innerHTML = 
+  document.getElementById('myDiv01').innerHTML = 
   myIn01 + ' squared = ' + myAnswer
   }"><br>
   <br>
@@ -108,11 +110,43 @@ document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*m
     body {
       
 
-        background: linear-gradient(black, purple, orange, blue);
+        background: linear-gradient(black, black, orange, black, black);
    
     font-family: 'VCR_OSD_MONO_1.001.ttf';
     color: white;
 }
+  a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: magenta; -webkit-background-clip: text;}
+          25%, 30% { background: purple; -webkit-background-clip: text;}
+          30%, 55% { background: magenta; -webkit-background-clip: text;}
+          55%, 100% { background: purple; -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim {
+       0%, 1% { background: transparent;-webkit-background-clip: text;}
+      1%, 100% { background: url("https://66.media.tumblr.com/63def8cf9f54a9ba0ded4a32a5348fff/tumblr_o8dqxiXXti1vvdojdo1_500.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
 <style>
     body {
         margin: 0;
@@ -166,4 +200,13 @@ document.getElementById('myDiv01').innerHTMl = myIn01 = ' squared = ' + myIn01*m
             -webkit-background-clip: text;
         }
     }
+</style>
+<style>
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
 </style>
