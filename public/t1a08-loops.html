@@ -32,12 +32,24 @@ myTemp += 'loop number' + myLoop + '<br>'
 }
 document.getElementById('myDiv01').innerHTML = myTemp
 }">
+<input type=button value="Basic number thing" onclick="{
+document.getElementById('myDiv01').innerHTML = ' '
+let myTemp = ' '
+let myMax = parseInt(document.getElementById('myNum01').value)
+for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+if (myLoop * 0  > myMax){
+myTemp += ' Totally brodacious '
+}
+myTemp += 'epic' + myLoop + '<br>'
+}
+document.getElementById('myDiv01').innerHTML = myTemp
+}">
 <div id="box"><div id="myDiv01">
 ...
 </div>
 <hr>
 Click for bit coin!!!!11 Half of the bitcoin will be the Exclusive Super Bitcoin!!111<br>
- <input id="myNum03" type=number value="4" ><br>
+ <input id="myNum03" type=number value="69" ><br>
 
 <input type=button value="cliccc=" onclick="{
 document.getElementById('myDiv01').innerHTML = ' '
@@ -52,6 +64,25 @@ myTemp += 'Bitcoin Count' + myLoop + '<br>'
 document.getElementById('myDiv03').innerHTML = myTemp
 }">
 <div id="box"><div id="myDiv03">
+...
+</div>
+<hr>
+Give me a mark<br>
+ <input id="myNum04" type=number value="9" ><br>
+
+<input type=button value="click the button=" onclick="{
+document.getElementById('myDiv01').innerHTML = ' '
+let myTemp = ' '
+let myMax = parseInt(document.getElementById('myNum04').value)
+for (let myLoop = 0; myLoop < myMax; myLoop++ ){
+if (myLoop * 0  < myMax){
+myTemp += ' This is '
+}
+myTemp += ' My Mark' + myLoop + '<br>'
+}
+document.getElementById('myDiv04').innerHTML = myTemp
+}">
+<div id="box"><div id="myDiv04">
 ...
 </div>
 <style>
