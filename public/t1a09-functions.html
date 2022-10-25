@@ -8,6 +8,24 @@ return myReply
 }
 </script>
 <script>
+function myFunction05(){
+let myIn01 = parseInt(document.getElementById('myText01').value)
+let mySum = myIn01 - myIn01
+let myReply = myIn01 + ' - ' + myIn01 + ' = ' + mySum
+return myReply
+
+}
+</script>
+<script>
+function myFunction06(){
+let myIn01 = parseInt(document.getElementById('myText01').value)
+let mySum = myIn01 / myIn01
+let myReply = myIn01 + ' / ' + myIn01 + ' = ' + mySum
+return myReply
+
+}
+</script>
+<script>
 function myFunction02 (){
 let myIn01 = parseInt(document.getElementById('myText02').value)
 let mySum = myIn01 * myIn01
@@ -27,6 +45,16 @@ return myReply03
 }
 </script>
 <script>
+function myFunction07 (){
+let myIn01 = parseInt(document.getElementById('myText03').value)
+let myIn02 = parseInt(document.getElementById('myText04').value)
+let mySum = myIn01 + myIn02
+let myReply03 = myIn01 + ' + ' + myIn02 + ' = ' + mySum
+return myReply03
+
+}
+</script>
+<script>
 function myFunction04 (){
 let myIn03 = parseInt(document.getElementById('myText03').value)
 let myIn04 = parseInt(document.getElementById('myText04').value)
@@ -36,40 +64,63 @@ return myReply04
 
 }
 </script>
+<script>
+function myFunction08 (){
+let myIn03 = parseInt(document.getElementById('myText03').value)
+let myIn04 = parseInt(document.getElementById('myText04').value)
+let mySum = myIn03 * myIn04
+let myReply04 = myIn03 + ' x ' + myIn04 + ' = ' + mySum
+return myReply04
+
+}
+</script>
 <h5>
 Version 0.0.1
 </h5>
-<h2 align=center>https://jsfiddle.net/x5oy2prs/#run
+<h2 align=center>
 t1a09: Functions by Gabby
 </h2>
 <a href="//www.w3schools.com/js/js_functions.asp">
   Good Reference to Javascript functions
 </a><br>
 
+<div id="box">
 Functions are used to sensibly organise code. Then they are "called" elsewhere. Additionally, info can also be passed to functions (more advanced stuff).
+</div>
 
 <h4 align=left>
 Example of functions code
 </h4>
+<div id="box">
+
 <pre>
 function myGrabNumber(){
 return parseInt(document.getElementById('myText01'))
 
 }
 </pre>
+</div>
 <h4>
 Example of Functional Functions code
 </h4>
-<input type=text id="myText01" value ="3"><br>
+<div id="box">
+
+<input type=text id="myText01" value ="27"><br>
 <input type=button value="Function Example" onclick="{
 document.getElementById('myDiv01').innerHTML = myFunction01()
+}">
+<input type=button value="0 button" onclick="{
+document.getElementById('myDiv01').innerHTML = myFunction05()
 }">
 <div id="myDiv01">
 ...
 </div>
-<input type=text id="myText02" value ="3"><br>
+<input type=text id="myText02" value ="27"><br>
 <input type=button value="Function Example (multiply)" onclick="{
 document.getElementById('myDiv02').innerHTML = myFunction02()
+}">
+<input type=button value="1 button" onclick="{
+document.getElementById('myDiv02').innerHTML = myFunction06()
 }">
 <div id="myDiv02">
 ...
@@ -79,21 +130,27 @@ document.getElementById('myDiv02').innerHTML = myFunction02()
 <input type=button value="Function Example (Subtract)" onclick="{
 document.getElementById('myDiv03').innerHTML = myFunction03()
 }">
+<input type=button value="Function Example (Add)" onclick="{
+document.getElementById('myDiv03').innerHTML = myFunction07()
+}">
 <div id="myDiv03">
 ...
 </div>
-<input type=text id="myText05" value ="3"> - <input type=text id="myText06" value ="8"><br>
+<input type=text id="myText05" value ="2"> - <input type=text id="myText06" value ="7"><br>
 <input type=button value="Function Example (divide)" onclick="{
 document.getElementById('myDiv04').innerHTML = myFunction04()
+}">
+<input type=button value="Function Example (multiply)" onclick="{
+document.getElementById('myDiv04').innerHTML = myFunction08()
 }">
 <div id="myDiv04">
 ...
 </div>
-
+</div>
 <style>
     body{
     
-    background: linear-gradient(black, black, purple, magenta, purple, black, black);
+    background: linear-gradient(black, black, green, lime, green, black, black);
         text-align: center;
         @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
         font-family: 'Share Tech Mono', monospace;
@@ -106,28 +163,18 @@ document.getElementById('myDiv04').innerHTML = myFunction04()
          
         }
         @keyframes colorchange {
-          0%, 25% { background: magenta; -webkit-background-clip: text;}
-          25%, 30% { background: purple; -webkit-background-clip: text;}
-          30%, 55% { background: magenta; -webkit-background-clip: text;}
-          55%, 100% { background: purple; -webkit-background-clip: text;}
+          0%, 25% { background: lime; -webkit-background-clip: text;}
+          25%, 30% { background: green; -webkit-background-clip: text;}
+          30%, 55% { background: lime; -webkit-background-clip: text;}
+          55%, 100% { background: green; -webkit-background-clip: text;}
+          </style>
         
-      
-      
-    }
-    }
-        </style>
         <style>
-           a:hover {
-      color: transparent;
-      animation: backgroundanim 1s infinite;
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
 
-    }
-    @keyframes backgroundanim {
-       0%, 1% { background: transparent;-webkit-background-clip: text;}
-      1%, 100% { background: url("https://66.media.tumblr.com/63def8cf9f54a9ba0ded4a32a5348fff/tumblr_o8dqxiXXti1vvdojdo1_500.gif") ;-webkit-background-clip: text;}
-        
-       
-    }
-    }
-
-        </style>
+}
+</style>
