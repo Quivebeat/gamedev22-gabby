@@ -1,1 +1,123 @@
+<h5>
+Version 0.0.1
+</h5>
+<title> Welcome to Arrays</title>
+<h2 align=center>T2A01: Objects by Gabby</h2><br>
 
+<div id="box"><a href="https://www.w3schools.com/js/js_arrays.asp">good reference to javascript arrays</a><br></div>
+
+arrays are stored numbered variables
+<h4>
+Example of Array code
+</h4>
+<div id="box"><pre>
+  myArray = new Array()
+  myArray[0] = 'Fred'
+  myArray[1] = 'Mary'
+</pre>
+</div>
+<h4>
+ Example of working array code
+</h4>
+
+Max Array Entry: <input type=text id="myText01" value="9"><br>
+
+<input type=button value="Example onClick" onClick="{
+let myTemp = document.getElementById('myText01').value
+let mySum = ' '
+document.getElementById('myDiv01').innerHTML = ' '
+
+myArray = new Array()
+myArray[0] = 'Fred'
+myArray[1] = 'Mary'
+myArray[2] = 'Zizzy'
+myArray[3] = 'does'
+myArray[4] = 'this'
+myArray[5] = 'count'
+myArray[6] = 'as'
+myArray[7] = '8'
+myArray[8] = 'arrays'
+
+for (let myLoop=0; myLoop < myTemp; myLoop++){
+mySum += 'Loop#: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>' 
+}
+document.getElementById('myDiv01').innerHTML = mySum
+}">
+
+<div id="myDiv01">
+...
+</div>
+<br>
+
+
+
+
+
+
+
+
+<style>
+    body{
+    
+    background: linear-gradient(70deg, black, black, black, black, black, red, crimson, pink, crimson, red,  black, black, black,  black, black);
+        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+    }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: crimson; -webkit-background-clip: text;}
+          25%, 30% { background: red; -webkit-background-clip: text;}
+          30%, 55% { background: crimson; -webkit-background-clip: text;}
+          55%, 100% { background: red; -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim{
+       0%, 1% { background: transparent;-webkit-background-clip: text;}
+      1%, 100% { background: url("https://media3.giphy.com/media/jQS9YkJXofyeI/giphy.gif?cid=790b76110b275bf96690013aad33e978344616890c275433&rid=giphy.gif&ct=g") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+ <style>
+#rainbow{
+   color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0%, 1% { background: transparent;-webkit-background-clip: text;}
+      1%, 100% { background: url("https://67.media.tumblr.com/e8037f0e4ea3a0a7160e743b824bc352/tumblr_nglg6pFHLy1s6fchho1_400.gif");-webkit-background-clip: text;}
+        
+       
+    }
+    }
+}
+</style>
+<style>
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
