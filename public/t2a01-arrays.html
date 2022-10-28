@@ -1,3 +1,92 @@
+<script>
+function myFunction2() {
+         let myTemp = document.getElementById('myText01').value
+         let mySum = ''
+         document.getElementById('myDiv01').innerHTML = ' '
+      
+         myArray = new Array()
+         myArray[0] = ' overcoats '
+         myArray[1] = ' Jackets'
+         myArray[2] =  'hoodies' 
+          myArray[3] = 'The jacket named hoodies'
+           myArray[4] = 'HOODIES SHALL REIGN SUPREMEEEEEEEEEEEEEEEEEEEEEE'
+      
+         for (let myLoop=0;   myLoop < myTemp;  myLoop++){
+            mySum += 'Loop #: ' + myLoop + ' The best jackets # ' + myLoop + ' : ' + myArray[myLoop] +'<br>'
+         }
+         document.getElementById('myDiv01').innerHTML = mySum
+      }
+      
+               function myFunction3() {
+         let myTemp = document.getElementById('myText01').value
+         let mySum = ''
+         document.getElementById('myDiv01').innerHTML = ' '
+      
+         myArray = new Array()
+         
+         myArray[0] = ' <h1 id="Web"> <img width=70 src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo-2013-2015.png"> Youtube  </h1> '
+         
+         myArray[1] = '  <h1 id="Web"> <img width=70 src="https://1000logos.net/wp-content/uploads/2017/05/New-YouTube-logo.jpg"> still youtube </h1> '
+         
+         myArray[2] = ' <img width=70 src="https://logos-download.com/wp-content/uploads/2016/02/Twitter_Logo_new.png"> not you  '
+         
+          myArray[3] = ' <h1 id="Web">twitter is garbage </h1>   '
+          
+           myArray[4] = '  <h1 id="Web"> youtube is pretty good ngl</h1> '
+      
+         for (let myLoop=0;   myLoop < myTemp;  myLoop++){
+            mySum += 'Loop #: ' + myLoop + ' best social media website' + myLoop + ' : ' + myArray[myLoop] +'<br>'
+         }
+         document.getElementById('myDiv01').innerHTML = mySum
+      }
+    
+      function myFunction4() {
+
+
+}
+
+function myFunction6() {
+
+let myMath = Math.floor(Math.random() * 100);
+  document.getElementById("demo4").innerHTML = 'You rolled ' + '<h1 id=pageStart> ' + myMath + '</h1> ' + '<br>' + ' Sorry!' + '<br>' +' Better luck next time! '
+if(myMath == 1)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: Rickroll!' +  + myMath + '<br>' + '<a href="https://www.youtube.com/embed/dQw4w9WgXcQ"> <input type=button value="Click me to view your reward!" class="win"> </a> ' + '<br>' 
+}
+if(myMath == 0)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: ' +  + myMath + '<br>' + '<a href="https://www.youtube.com/embed/JxsC0yW1tnQ"> <input type=button value="How" class="win"> </a> ' + '<br>' 
+}
+if(myMath == 69)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: ' +  + myMath + '<br>' + '<a href="https://www.youtube.com/embed/eN6jkWxxm2Y"> <input type=button value="umm, congrats?" class="win"> </a> ' + '<br>' 
+}
+if(myMath == 27)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: ' +  + myMath + '<br>' + '<a href="https://www.youtube.com/embed/Yh1ZDa-rinM"> <input type=button value="sick." class="win"> </a> ' + '<br>' 
+}
+if(myMath == 72)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: ' +  + myMath + '<br>' + '<img src="https://tdrresearch.azureedge.net/photos/chrome/Expanded/White/2022TOC320001/2022TOC32000101.jpg"> <input type=button value="Bep BEep" class="win"> ' + '<br>' 
+}
+if(myMath == 34)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled: ' +  + myMath + '<br>' + '<img src="https://pbs.twimg.com/profile_images/1403852336955416577/JajAb1M__400x400.jpg"> <input type=button value="Follow @Rocksetta" class="win"> ' + '<br>' 
+}
+if(myMath == 100)
+{
+  document.getElementById("demo4").innerHTML = 'You Rolled... wait, what? ' +  + myMath + '<br>' + '<a href="https://www.youtube.com/embed/rgUksX6eM0Y"> <input type=button value="????????????????????" class="win"> </a> ' + '<br>' 
+}
+
+}
+
+
+
+</script>
+
+
+
+
 <h5>
 Version 0.0.1
 </h5>
@@ -26,7 +115,6 @@ Max Array Entry: <input type=text id="myText01" value="9"><br>
 let myTemp = document.getElementById('myText01').value
 let mySum = ' '
 document.getElementById('myDiv01').innerHTML = ' '
-
 myArray = new Array()
 myArray[0] = 'Fred'
 myArray[1] = 'Mary'
@@ -37,19 +125,28 @@ myArray[5] = 'count'
 myArray[6] = 'as'
 myArray[7] = '8'
 myArray[8] = 'arrays'
-
 for (let myLoop=0; myLoop < myTemp; myLoop++){
 mySum += 'Loop#: ' + myLoop + ' array entry: ' + myArray[myLoop] + '<br>' 
 }
 document.getElementById('myDiv01').innerHTML = mySum
 }">
-
+<input type="button" class="button" value="Nice Jackets " onclick="myFunction2()">
+<input type="button" class="button" value="Best website in the world " onclick="myFunction3()">
 <div id="myDiv01">
 ...
 </div>
 <br>
 
+<h1>
+GACHAAAAAAAAAAAAAAAA
+Win a prize!
+</h1>
+<input type=button class="button" value="Gachapon Button" onclick="myFunction6()">
 
+
+<p id="demo4">
+ 
+</p>
 
 
 
