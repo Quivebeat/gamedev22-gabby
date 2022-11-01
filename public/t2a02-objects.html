@@ -1,3 +1,26 @@
+<sc<script>
+function variable() {
+let firstName = document.getElementById('myDiv03').innerHTML = document.getElementById('myText01').value
+let lastName = document.getElementById('myDiv03').innerHTML = document.getElementById('myText02').value
+let age = document.getElementById('myDiv03').innerHTML = document.getElementById('myText03').value
+let eyeColor = document.getElementById('myDiv03').innerHTML = document.getElementById('myText04').value
+let weight = document.getElementById('myDiv03').innerHTML = document.getElementById('myText05').value
+let myMark = document.getElementById('myDiv03').innerHTML = document.getElementById('myText06').value
+
+
+
+   document.getElementById("myDiv03").innerHTML = " "
+   document.getElementById('myDiv03').innerHTML += 'First Name: ' + firstName  + '<br> <br> '
+   document.getElementById('myDiv03').innerHTML += 'Last Name: ' + lastName + '<br> <br> ' 
+      document.getElementById('myDiv03').innerHTML += 'Age:  ' + age  +  '<br> <br> '
+         document.getElementById('myDiv03').innerHTML += 'Eye Color:  ' + eyeColor  + ' <br> <br> ' 
+         document.getElementById('myDiv03').innerHTML += 'Weight:  ' + weight + 'lbs' + ' <br> <br> ' 
+         document.getElementById('myDiv03').innerHTML += 'My Mark:  ' + myMark + ' <br> <br> ' 
+                          
+
+
+}
+</script>
 <h5>
 Version 0.0.1
 </h5>
@@ -131,6 +154,17 @@ document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark2 +
 document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark3 + '<br>'
 }">
 <div id="myDiv01">
+...
+</div>
+Set Name <input type=text id="myText01" value="Gabriel"><br>
+Set LastName <input type=text id="myText02" value="Dayag"><br>
+Set Age <input type=text id="myText03" value="16"><br>
+Set Eyecolour <input type=text id="myText04" value="Brown"><br>
+Set Weight (lbs) <input type=text id="myText05" value="130"><br>
+Set the mark I should get :skull: <input type=text id="myText06" value="9"><br>
+
+Set <input type=button id="myButton01" value="show" onclick="variable()"><br>
+<div id="myDiv03">
 ...
 </div>
 
