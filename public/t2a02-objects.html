@@ -22,7 +22,7 @@ let myMark = document.getElementById('myDiv03').innerHTML = document.getElementB
 }
 </script>
 <h5>
-Version 0.0.1
+Version 0.0.5
 </h5>
 <br>
 <h2 align=center><div id="titletext">
@@ -294,19 +294,17 @@ margin: 1px;
         <style>
         #titletext{
           color: transparent;
-      animation: backgroundanim03 1s infinite, tilt-shaking02 5s infinite;
+      animation: backgroundanim03 1s infinite, tilt-shaking02 4s infinite;
 
     }
     @keyframes tilt-shaking02 {
-  0% { transform: rotate(0deg); }
-  33% { transform: rotate(2deg); }
-  66% { transform: rotate(-2deg); }
-  99% { transform: rotate(0deg); }
+  0% { transform: rotate(2deg); }
+  40% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
 
 }
     @keyframes backgroundanim03 {
-       0% { background: transparent;-webkit-background-clip: text;}
-      0%, 100% { background: url("https://78.media.tumblr.com/tumblr_mbjwlvwO5R1reeolao1_500.gif") ;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://data.whicdn.com/images/275376295/original.gif") ;-webkit-background-clip: text;}
         
        
     }
