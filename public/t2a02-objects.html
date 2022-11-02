@@ -25,8 +25,9 @@ let myMark = document.getElementById('myDiv03').innerHTML = document.getElementB
 Version 0.0.1
 </h5>
 <br>
-<h2 align=center>
+<h2 align=center><div id="titletext">
 t2a02/t1a012: Objects by Gabby
+</div>
 </h2>
 
 <a href="https://www.w3schools.com/js/js_objects.asp">Reference for Javascript Objects</a><br>
@@ -55,15 +56,12 @@ let myPerson = {
 'lastName'  : 'Doe',
 'age'   : 50,
 'eyeColour': 'blue'
-
 }
 document.getElementById('myDiv01').innerHTML = '<br>myPerson Object has properties: <br>'
 document.getElementById('myDiv01').innerHTML += 'firstName' + myPerson.firstName + '<br>'
 document.getElementById('myDiv01').innerHTML += 'lastName' + myPerson.lastName + '<br>'
 document.getElementById('myDiv01').innerHTML += 'age' + myPerson.age + '<br>'
-
 document.getElementById('myDiv01').innerHTML += 'eyeColour' + myPerson.eyeColour + '<br>'
-
 }">
 <input type=button value="Epic Types of Tape" onClick="{
 let myTape01 = {
@@ -71,14 +69,12 @@ let myTape01 = {
 'paintersTape'  : 'tape!!',
 'clearTape'   : 'tape!!!',
 'videoTape': 'tapes!!!!!'
-
 }
 document.getElementById('myDiv01').innerHTML = '<br>Epic Types of Tape<br>'
 document.getElementById('myDiv01').innerHTML += 'Duct ' + myTape01.ductTape + '<br>'
 document.getElementById('myDiv01').innerHTML += 'Painters ' + myTape01.paintersTape + '<br>'
 document.getElementById('myDiv01').innerHTML += 'Clear ' + myTape01.clearTape + '<br>'
 document.getElementById('myDiv01').innerHTML += 'Video' + myTape01.videoTape + '<br>'
-
 }">
 <input type=button value="Epic Types of Trees" onClick="{
 let myTree = {
@@ -86,7 +82,6 @@ let myTree = {
 'oakTree'  : 'Trees are good for building',
 'birchTree'   : 'tree',
 'spruceTree': 'TREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
-
 }
 document.getElementById('myDiv01').innerHTML = '<br>Epic Types of Trees<br>'
 document.getElementById('myDiv01').innerHTML += 'PINE ' + myTree.pineTree + '<br>'
@@ -105,7 +100,6 @@ document.getElementById('myDiv01').innerHTML = '<br>Primary Colors <br>'
 document.getElementById('myDiv01').innerHTML += 'The Colour: ' + myColor.blue + '<br>'
 document.getElementById('myDiv01').innerHTML += 'The Colour: ' + myColor.red + '<br>'
 document.getElementById('myDiv01').innerHTML += 'The Colour: ' + myColor.yellow + '<br>'
-
 }">
 <input type=button value="Secondary Colours" onClick="{
 let myColor01 = {
@@ -138,20 +132,7 @@ document.getElementById('myDiv01').innerHTML += 'The Colour ' + favColor02.doDoo
 }">
 <br>
 <br>
-<input type=button value="Click to see me beg for a 9/9" onClick="{
-let myMark = {
-'gabbysMark'  : 'Gimmie a 9',
-'gabbysMark1'  : 'Gimmie a 9 now',
-'gabbysMark2'  : 'Gimmie a 9 pretty please',
-'gabbysMark3'  : 'Gimmie a 9 please I beg you PLEAAAAAAAASSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
 
-}
-document.getElementById('myDiv02').innerHTML = '<br>GIMMIE A 9/9 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>'
-document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark + '<br>'
-document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark1 + '<br>'
-document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark2 + '<br>'
-document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark3 + '<br>'
-}">
 <div id="myDiv01">
 ...
 </div>
@@ -166,6 +147,22 @@ Set <input type=button id="myButton01" value="show" onclick="variable()"><br>
 <div id="myDiv03">
 ...
 </div>
+<br>
+<br>
+<br>
+<input type=button value="Click to see me beg for a 9/9" onClick="{
+let myMark = {
+'gabbysMark'  : 'Gimmie a 9',
+'gabbysMark1'  : 'Gimmie a 9 now',
+'gabbysMark2'  : 'Gimmie a 9 pretty please',
+'gabbysMark3'  : 'Gimmie a 9 please I beg you PLEAAAAAAAASSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
+}
+document.getElementById('myDiv02').innerHTML = '<br>GIMMIE A 9/9 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>'
+document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark + '<br>'
+document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark1 + '<br>'
+document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark2 + '<br>'
+document.getElementById('myDiv02').innerHTML += 'PLEASE ' + myMark.gabbysMark3 + '<br>'
+}">
 
 <h1><div id="myDiv02">
 
@@ -213,15 +210,22 @@ Set <input type=button id="myButton01" value="show" onclick="variable()"><br>
         <style>
            a:hover {
       color: transparent;
-      animation: backgroundanim 1s infinite;
+      animation: backgroundanim 1s infinite, tilt-shaking04 0.5s infinite;
 
     }
+    @keyframes tilt-shaking04 {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(2deg); }
+  66% { transform: rotate(-2deg); }
+  99% { transform: rotate(0deg); }
+
+}
     @keyframes backgroundanim {
        0% { background: transparent;-webkit-background-clip: text;}
       0%, 100% { background: url("https://i.pinimg.com/originals/88/15/c1/8815c1530ba8b997d50d365e5875d1d7.gif") ;-webkit-background-clip: text;}
         
        
-    }
+    
     }
 
         </style>
@@ -248,4 +252,63 @@ padding: 10px;
 margin: 1px;
 
 }
+</style>
+<style>
+#myDiv03{
+  color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/3o7GVDAkLp4cEMbzwc/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+<style>
+#myDiv02{
+  color: transparent;
+      animation: backgroundanim 1s infinite, tilt-shaking 0.1s infinite;
+
+    }
+    @keyframes tilt-shaking {
+  0% { transform: translate(0, 0) rotate(0deg) skew(-2deg, 0); }
+  25% { transform: translate(2px, -6px) rotate(2deg) skew(2, 0); }
+  50% { transform: translate(-3px, 1px)rotate(0deg ) skew(0, -2deg); }
+  75% { transform: translate(-6px, 2px)rotate(-2deg) skew(0, 2deg); }
+  100% { transform: translate(0, 0)rotate(0deg) skewY(0, 0); }
+
+}
+    @keyframes backgroundanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://78.media.tumblr.com/tumblr_mbjwlvwO5R1reeolao1_500.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+        <style>
+        #titletext{
+          color: transparent;
+      animation: backgroundanim03 1s infinite, tilt-shaking02 5s infinite;
+
+    }
+    @keyframes tilt-shaking02 {
+  0% { transform: rotate(0deg); }
+  33% { transform: rotate(2deg); }
+  66% { transform: rotate(-2deg); }
+  99% { transform: rotate(0deg); }
+
+}
+    @keyframes backgroundanim03 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://78.media.tumblr.com/tumblr_mbjwlvwO5R1reeolao1_500.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
 </style>
