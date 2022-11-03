@@ -1,10 +1,15 @@
-<script>
+\<script>
 
    // global variables here
+   let myGun01
+   let myGun02
+   let myGun03
+   let myGun04
+   let myShooting = 1
 
    let myGlobalX = 0
    let myClock
-   let myScore = 10
+   let myScore = 3
 
 
    // global functions here
@@ -30,17 +35,33 @@ function myCheckHit(){
    document.all.myText01.value = myScore  // show the present score
 
    if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('myImg01').style.left = '5px'
       document.all.myText01.value = 'You hit myImg02'  
       myScore -= 1
    }   
    
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
-      document.getElementById('myImg01').style.left = '20px'
+      document.getElementById('myImg01').style.left = '5px'
       document.all.myText01.value = 'You hit myImg03'  
       myScore -= 1
    }   
+    
+
+   if ( myHitOther('myBullet01','myImg03') ){
+      clearInterval(myGun01)
+      document.getElementById('myBullet01').style.left = '-200px'
+      document.all.myText01.value = 'You shot myImg03'  
+      myScore += 1
+   }   
+   
+   if ( myHitOther('myBullet02','myImg03') ){
+      clearInterval(myGun02)
+      document.getElementById('myBullet02').style.left = '-200px'
+      document.all.myText01.value = 'You shot myImg03'  
+      myScore += 1
+   }   
+   
    
   // you LOSE refresh the page
    if (myScore <= 0){
@@ -82,6 +103,31 @@ function myCheckHit(){
       if (event.key == 'w') {   // w = go up
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
       }
+      if (event.key == 'k'){
+if (myShooting > 2 ){myShooting = 1}
+  // Bullet Number 2
+if (myShooting == 2){
+  myShooting += 1
+  document.getElementById('myBullet02').style.left = document.getElementById('myImg01').style.left
+  document.getElementById('myBullet02').style.top  = document.getElementById('myImg01').style.top
+  clearInterval(myGun02)
+  myGun02 = setInterval(function(){
+     document.getElementById('myBullet02').style.left = parseInt(document.getElementById('myBullet02').style.left) + 10 + 'px'
+     myCheckHit() 
+  }, 1)   // speed of bullet faster lower number
+}
+  // Bullet Number 1
+if (myShooting == 1){
+  myShooting += 1
+  document.getElementById('myBullet01').style.left = document.getElementById('myImg01').style.left
+  document.getElementById('myBullet01').style.top  = document.getElementById('myImg01').style.top
+  clearInterval(myGun01)
+  myGun01 = setInterval(function(){
+     document.getElementById('myBullet01').style.left = parseInt(document.getElementById('myBullet01').style.left) + 10 + 'px'
+     myCheckHit() 
+  }, 1)   // speed of bullet faster lower number
+}
+      }
    // put more here
   myCheckHit()     // checks for all collisions
 }">
@@ -92,6 +138,12 @@ function myCheckHit(){
 
 <h1 align=center><font color=Yellow>Testplace gabby</font></h1>
 
+<h1>
+PRESS K TO SHOOT THE GODDAMN THERAPISTS
+</h1>
+<h2>
+Touch the dancing guy to WIN!!!111!!11!!!1z11!!!!1!
+</h2>
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
 <input type=button value="Auto Background Left" onclick="{
@@ -122,7 +174,10 @@ function myCheckHit(){
 <input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
   myCheckHit()     // checks for all collisions
+  
+ 
 }">
+
 
 
 
@@ -131,3 +186,10 @@ function myCheckHit(){
 <img id="myImg02" src="https://media.tenor.com/images/059dab409ba6a22fe350c6df3304faea/tenor.gif"  style="position:absolute; width:75px; height:80px; left:350px; top:190px;">
 <img id="myImg03" src="https://media.tenor.com/images/059dab409ba6a22fe350c6df3304faea/tenor.gif"  style="position:absolute; width:75px; height:80px; left:500px; top:190px;">
 <img id="myImg04" src="https://media.tenor.com/images/0a8faa1b0adec1be0a8813b4c578a837/tenor.gif"  style="position:absolute; width:75px; height:90px; left:450px; top:400px;">
+<img id="myBullet01" src="https://i.gifer.com/3SOa.gif"  style="position:absolute; width:100px; height:100px; left: 130px; top:190px;">
+<img id="myBullet02" src="https://i.pinimg.com/originals/81/5f/4f/815f4f9902211a1af6378ca3566f706a.gif"  style="position:absolute; width:100px; height:100px; left: 150px; top:190px;">
+
+<style>
+body{
+  background: black;
+}</style>
