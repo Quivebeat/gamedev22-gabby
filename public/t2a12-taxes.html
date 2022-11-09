@@ -1,1 +1,405 @@
+<h5>
+Version 0.0.1
+</h5>
+<h1 align=center>
+t2a13: Funni Taxes 
+</h1>
+<h5>
+by Gabby (totally)
+</h5>
 
+
+
+
+
+
+
+Wage in an Hour: <input type="number" id="hourWage" value="15" oninput="clearButtons()">
+Hours worked in a day: <input type="number" id="hourWorked" value="8" oninput="clearButtons()">
+   <input type="number" id="taxBracket" value="30">
+<input type="button" id="button" value="Calculate the Taxes" onclick="calculateTaxBracket()">
+
+<input type="button" id="button2" value="Click to Calculate Taxes for your salary" onclick="myCalculate()">
+<div id="myDiv05">
+    ...
+    </div>
+<div id="myDiv01"> 
+    ...
+</div>
+<div id="myDiv02"> 
+    ...
+    </div>
+
+    <div id="myDiv03">
+        ...
+    </div>
+
+    <div id="myDiv04">
+        ...
+        </div>
+
+        <div id="myDiv07">
+            ...
+            </div>
+
+<br>
+        <div id="myDiv06">
+             <br> What does it do? <br>
+             <li>  This thing Automatically calculates the tax bracket based on the salary <br> </li>
+                <li>  Calculates the taxes based on the tax bracket <br> </li>
+                <li>  Calculates the net salary based on the taxes <br> </li>
+                <li>  Calculates the daily, weekly, monthly and yearly ammounts <br> </li>
+                <li> Forced Recalculating tax bracket on input change with hiding buttons <br> </li> 
+                <li> Forced Number value only in input fields </li>
+                <li> Ahahaha imagine not being a minor! Good luck on calculating your taxes! </li>
+
+           <br>
+           
+
+            </div>
+<br>
+<br>
+        
+
+<script>
+//show calculate tax bracket button when changing a value
+    function clearButtons() {
+        document.getElementById("button2").style.display = "none";
+        document.getElementById("button").style.display = "inline";
+        document.getElementById("myDiv05").style.display = "none";
+        document.getElementById("myDiv04").style.display = "none";
+        document.getElementById("myDiv03").style.display = "none";
+        document.getElementById("myDiv02").style.display = "none";
+        document.getElementById("myDiv01").style.display = "none";
+        document.getElementById("myDiv07").innerHTML = " <br> Recalculate tax bracket to see results ";
+    }
+
+
+
+//*automatically calculate tax bracket 
+    function calculateTaxBracket() {
+        let hourWage = document.getElementById("hourWage").value;
+let hourWorked = document.getElementById("hourWorked").value;
+let taxBracket = document.getElementById("taxBracket").value;
+
+
+//* daily 
+let salary = hourWage * hourWorked;
+let tax = salary * taxBracket / 100;
+let netSalary = salary - tax;
+
+
+//* weekly
+let weeklySalary = hourWage * hourWorked * 5;
+let weekyTax = salary * taxBracket / 100 * 5;
+let weekyNetSalary = weeklySalary - weekyTax;   
+
+//* monthly
+let monthlySalary = hourWage * hourWorked * 30;
+let monthlyTax = monthlySalary * taxBracket / 100;
+let monthlyNetSalary = monthlySalary - monthlyTax;
+
+//* yearly
+let yearlySalary = hourWage * hourWorked * 365;
+let yearlyTax = yearlySalary * taxBracket / 100;
+let yearlyNetSalary = yearlySalary - yearlyTax;
+
+document.getElementById("button2").style.display = "none";
+        document.getElementById("button").style.display = "block";
+        document.getElementById("myDiv05").style.display = "block";
+        document.getElementById("myDiv04").style.display = "block";
+        document.getElementById("myDiv03").style.display = "block";
+        document.getElementById("myDiv02").style.display = "block";
+        document.getElementById("myDiv01").style.display = "block";
+        document.getElementById("myDiv07").innerHTML = " ";
+        
+
+        document.getElementById("button2").style.display = "inline";
+        document.getElementById("button").style.display = "none";
+
+       
+       //* actual code to determine tax bracket automatically
+        if (yearlySalary >= 42184) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 20.06% ";
+    document.getElementById("taxBracket").value = "20.06"; 
+} 
+
+if (yearlySalary >= 49020) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 22.70% ";
+    document.getElementById("taxBracket").value = "22.70"; 
+} 
+
+if (yearlySalary >= 84369) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 28.20% ";
+    document.getElementById("taxBracket").value = "28.20"; 
+} 
+
+if (yearlySalary >= 96866) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 31.00% ";
+    document.getElementById("taxBracket").value = "31"; 
+} 
+
+if (yearlySalary >= 98040) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 32.79% ";
+    document.getElementById("taxBracket").value = "32.79"; 
+} 
+
+if (yearlySalary >= 117623) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 38.29% ";
+    document.getElementById("taxBracket").value = "38.29"; 
+} 
+
+if (yearlySalary >= 151978) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 40.70% ";
+    document.getElementById("taxBracket").value = "40.70"; 
+} 
+
+if (yearlySalary >= 159483) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 43.70% ";
+    document.getElementById("taxBracket").value = "43.70"; 
+} 
+
+if (yearlySalary >= 216511) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 45.80% ";
+    document.getElementById("taxBracket").value = "45.80"; 
+} 
+
+if (yearlySalary >= 222420) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 49.80% ";
+    document.getElementById("taxBracket").value = "49.80"; 
+} 
+
+if (yearlySalary >= 223000) {
+    document.getElementById("myDiv05").innerHTML = "Your tax bracket is 53.50% ";
+    document.getElementById("taxBracket").value = "53.50"; 
+} 
+
+
+
+    }
+
+    //* Function to calculate the gross pay, tax and net pay, global variables
+    function myCalculate() {
+let hourWage = document.getElementById("hourWage").value;
+let hourWorked = document.getElementById("hourWorked").value;
+let taxBracket = document.getElementById("taxBracket").value;
+
+
+//* daily 
+let salary = hourWage * hourWorked;
+let tax = salary * taxBracket / 100;
+let netSalary = salary - tax;
+
+
+//* weekly
+let weeklySalary = hourWage * hourWorked * 5;
+let weekyTax = salary * taxBracket / 100 * 5;
+let weekyNetSalary = weeklySalary - weekyTax;   
+
+//* monthly
+let monthlySalary = hourWage * hourWorked * 30;
+let monthlyTax = monthlySalary * taxBracket / 100;
+let monthlyNetSalary = monthlySalary - monthlyTax;
+
+//* yearly
+let yearlySalary = hourWage * hourWorked * 365;
+let yearlyTax = yearlySalary * taxBracket / 100;
+let yearlyNetSalary = yearlySalary - yearlyTax;
+
+
+
+
+//* display the daily  
+document.getElementById("myDiv01").innerHTML = "<br> <br> <br> <h3> Daily monies </h3>" + "Daily Salary: " + salary + "$ <br> "+ "Daily Tax: " + tax + "$ <br>" +"Daily Net salary: " + netSalary + "$ <br>" 
+
+
+//* display the weekly 
+document.getElementById("myDiv02").innerHTML = "<br> <br> <br> <h3> Weekly monies </h3>" + "Weekly Salary: " + weeklySalary + "$ <br>" + "Weekly Tax: " + weekyTax + " $ <br>" + "Weekly Net salary: " + weekyNetSalary + "$ <br>" 
+
+
+//* display the monthly 
+
+document.getElementById("myDiv03").innerHTML = "<br> <br> <br> <h3> Monthly monies </h3>" + "Monthly Salary: " + monthlySalary + "$ <br>" + "Monthly Tax: " + monthlyTax + " $ <br>" + "Monthly Net salary: " + monthlyNetSalary + "$ <br>" 
+
+
+//* display the yearly
+document.getElementById("myDiv04").innerHTML = "<br> <br> <br> <h3> Yearly monies </h3>" + "Yearly Salary: " + yearlySalary + "$ <br>" + "Yearly Tax: " + yearlyTax + " $ <br>" + "Yearly Net salary: " + yearlyNetSalary + "$ <br>" 
+
+
+
+ 
+ 
+
+
+
+
+
+}
+
+</script>
+
+
+<style>
+
+
+#myDiv06 {
+    background: url("https://68.media.tumblr.com/78c093b58529a2695a1c29c470008edf/tumblr_okxm6sC9J71w5slrzo1_500.gif");
+    border: 3px solid black;
+    border-radius: 1em;
+    color: linear-gradient(white, black);
+    z-index: 999;
+
+}
+
+    #button2 {
+        display: none;
+    }
+
+#taxBracket {
+display: none;
+}
+
+// 
+#myDiv05 {
+position: absolute;
+margin: auto;
+
+}
+
+input, #button, #button2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background: black;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+input:hover, #button:hover, #button2:hover {
+    background: url("https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif");
+    color: #f2f2f2;
+    transition: 0.2s all;
+    transform: scale(0.99);
+    border-radius: 0.2em;
+    
+}
+#button:active, #button2:active {
+    background: black;
+    color: #f2f2f2;
+    transition: 0.2s all;
+    transform: scale(0.95);
+    border-radius: 0.2em;
+    
+    }
+    </style>
+    <style>
+    body{
+    
+    background: url("https://pa1.narvii.com/7223/e29ed61fc7d28d5d26243ca24185d1fa64264458r1-500-281_hq.gif");
+        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+    }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          25%, 30% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+          30%, 55% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          55%, 100% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://i.pinimg.com/originals/88/15/c1/8815c1530ba8b997d50d365e5875d1d7.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+ <style>
+#rainbow{
+   color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://67.media.tumblr.com/e8037f0e4ea3a0a7160e743b824bc352/tumblr_nglg6pFHLy1s6fchho1_400.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+}
+</style>
+<style>
+#myDiv01{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+#myDiv02{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+#myDiv03{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+#myDiv04{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+#myDiv05{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+#myDiv07{
+background: url("https://media1.tenor.com/images/aa2daecdf85cb6c66f7b6509ebf61cef/tenor.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+                                                    <style>
+#box02{
+background: url("https://thumbs.gfycat.com/BreakableHappyAndalusianhorse-size_restricted.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
