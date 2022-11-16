@@ -1,54 +1,85 @@
 
-<h1 align=center>t2a06-spy-name.html</h1>
-<textarea id="myArea01" rows=4 cols=70>Hello how are you</textarea><br> 
+<h1 align=center>t2a06-spy-gabby.html</h1>
+<textarea id="myArea01" rows=4 cols=70>The Quick Brown Fox Jumps Over The Lazy Dog numbers dont work</textarea><br> 
 
-
-<input type=button value="encrypt" onclick="{
+<button id="Button01" onclick="encrypt()">Base 64 Encypt</button>
+<input type=button value="encrypt (Numbers)" id="Button02" onclick="{
    let myTemp = ''
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == 'a') {myTemp  = '14040'} 
-      if (myString[myLoop] == 'b') {myTemp  = '63100'} 
-      if (myString[myLoop] == 'c') {myTemp  = '61090'} 
-      if (myString[myLoop] == 'd') {myTemp  = '80100'}
-      if (myString[myLoop] == 'e') {myTemp  = '17780'} 
-      if (myString[myLoop] == 'f') {myTemp  = '10136'} 
-      if (myString[myLoop] == 'g') {myTemp  = '12228'} 
-      if (myString[myLoop] == 'h') {myTemp  = '00230'}
-      if (myString[myLoop] == 'i') {myTemp  = '10110'} 
-      if (myString[myLoop] == 'j') {myTemp  = '21320'} 
-      if (myString[myLoop] == 'k') {myTemp  = '55504'} 
-      if (myString[myLoop] == 'l') {myTemp  = '02000'}
-      if (myString[myLoop] == 'm') {myTemp  = '20735'} 
-      if (myString[myLoop] == 'n') {myTemp  = '00842'}
-      if (myString[myLoop] == 'o') {myTemp  = '00000'} 
-      if (myString[myLoop] == 'p') {myTemp  = '09850'}
-      if (myString[myLoop] == 'q') {myTemp  = '00835'} 
-      if (myString[myLoop] == 'r') {myTemp  = '01257'} 
-      if (myString[myLoop] == 's') {myTemp  = '02730'} 
-      if (myString[myLoop] == 't') {myTemp  = '01874'}
-      if (myString[myLoop] == 'u') {myTemp  = '11051'} 
-      if (myString[myLoop] == 'v') {myTemp  = '11023'} 
-      if (myString[myLoop] == 'w') {myTemp  = '00827'} 
-      if (myString[myLoop] == 'x') {myTemp  = '09421'}
-      if (myString[myLoop] == 'y') {myTemp  = '02673'}
-      if (myString[myLoop] == 'z') {myTemp  = '01240'} 
-      if (myString[myLoop] == '1') {myTemp  = '08110'} 
-      if (myString[myLoop] == '2') {myTemp  = '88208'} 
-      if (myString[myLoop] == '3') {myTemp  = '19640'}
-      if (myString[myLoop] == '4') {myTemp  = '12032'} 
-      if (myString[myLoop] == '5') {myTemp  = '50330'}
-      if (myString[myLoop] == '6') {myTemp  = '01204'} 
-      if (myString[myLoop] == '7') {myTemp  = '00340'} 
-      if (myString[myLoop] == '8') {myTemp  = '30980'} 
-      if (myString[myLoop] == '9') {myTemp  = '04205'}
-      if (myString[myLoop] == '!') {myTemp  = '02403'}
-      if (myString[myLoop] == '?') {myTemp  = '03606'} 
-      if (myString[myLoop] == '.') {myTemp  = '02109'} 
-      if (myString[myLoop] == ',') {myTemp  = '03050'} 
-      if (myString[myLoop] == ':') {myTemp  = '02060'}
-      if (myString[myLoop] == '0') {myTemp  = '10101'}
+      if (myString[myLoop] == 'a') {myTemp  = '1235'} 
+      if (myString[myLoop] == 'b') {myTemp  = '2874'} 
+      if (myString[myLoop] == 'c') {myTemp  = '1142'} 
+      if (myString[myLoop] == 'd') {myTemp  = '2124'}
+      if (myString[myLoop] == 'e') {myTemp  = '1573'} 
+      if (myString[myLoop] == 'f') {myTemp  = '2934'} 
+      if (myString[myLoop] == 'g') {myTemp  = '1354'} 
+      if (myString[myLoop] == 'h') {myTemp  = '2663'}
+      if (myString[myLoop] == 'i') {myTemp  = '1452'} 
+      if (myString[myLoop] == 'j') {myTemp  = '2566'} 
+      if (myString[myLoop] == 'k') {myTemp  = '1883'} 
+      if (myString[myLoop] == 'l') {myTemp  = '2273'}
+      if (myString[myLoop] == 'm') {myTemp  = '1874'} 
+      if (myString[myLoop] == 'n') {myTemp  = '2906'}
+      if (myString[myLoop] == 'o') {myTemp  = '1100'} 
+      if (myString[myLoop] == 'p') {myTemp  = '2002'}
+      if (myString[myLoop] == 'q') {myTemp  = '1754'} 
+      if (myString[myLoop] == 'r') {myTemp  = '2617'} 
+      if (myString[myLoop] == 's') {myTemp  = '1854'} 
+      if (myString[myLoop] == 't') {myTemp  = '2776'}
+      if (myString[myLoop] == 'u') {myTemp  = '1846'} 
+      if (myString[myLoop] == 'v') {myTemp  = '2213'} 
+      if (myString[myLoop] == 'w') {myTemp  = '1332'} 
+      if (myString[myLoop] == 'x') {myTemp  = '2168'}
+      if (myString[myLoop] == 'y') {myTemp  = '1464'}
+      if (myString[myLoop] == 'z') {myTemp  = '2121'} 
+      if (myString[myLoop] == '!') {myTemp  = '1111'}
+      if (myString[myLoop] == '?') {myTemp  = '2876'} 
+      if (myString[myLoop] == '.') {myTemp  = '1008'} 
+      if (myString[myLoop] == ',') {myTemp  = '2531'} 
+      if (myString[myLoop] == ':') {myTemp  = '1997'}
+      
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
+}">
+<input type=button value="encrypt (Letters)" id="Button03" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'a') {myTemp  = 'q'} 
+      if (myString[myLoop] == 'b') {myTemp  = 'a'} 
+      if (myString[myLoop] == 'c') {myTemp  = 'z'} 
+      if (myString[myLoop] == 'd') {myTemp  = 'w'}
+      if (myString[myLoop] == 'e') {myTemp  = 's'} 
+      if (myString[myLoop] == 'f') {myTemp  = 'x'} 
+      if (myString[myLoop] == 'g') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'h') {myTemp  = 'd'}
+      if (myString[myLoop] == 'i') {myTemp  = 'c'} 
+      if (myString[myLoop] == 'j') {myTemp  = 'r'} 
+      if (myString[myLoop] == 'k') {myTemp  = 'f'} 
+      if (myString[myLoop] == 'l') {myTemp  = 'v'}
+      if (myString[myLoop] == 'm') {myTemp  = 't'} 
+      if (myString[myLoop] == 'n') {myTemp  = 'g'}
+      if (myString[myLoop] == 'o') {myTemp  = 'b'} 
+      if (myString[myLoop] == 'p') {myTemp  = 'y'}
+      if (myString[myLoop] == 'q') {myTemp  = 'h'} 
+      if (myString[myLoop] == 'r') {myTemp  = 'n'} 
+      if (myString[myLoop] == 's') {myTemp  = 'u'} 
+      if (myString[myLoop] == 't') {myTemp  = 'j'}
+      if (myString[myLoop] == 'u') {myTemp  = 'm'} 
+      if (myString[myLoop] == 'v') {myTemp  = 'i'} 
+      if (myString[myLoop] == 'w') {myTemp  = 'k'} 
+      if (myString[myLoop] == 'x') {myTemp  = 'o'}
+      if (myString[myLoop] == 'y') {myTemp  = 'l'}
+      if (myString[myLoop] == 'z') {myTemp  = 'p'} 
+      if (myString[myLoop] == '!') {myTemp  = '?'}
+      if (myString[myLoop] == '?') {myTemp  = '!'} 
+      if (myString[myLoop] == '.') {myTemp  = ','} 
+      if (myString[myLoop] == ',') {myTemp  = ':'} 
+      if (myString[myLoop] == ':') {myTemp  = '.'}
       
       myString[myLoop] = myTemp
    }
@@ -56,55 +87,90 @@
 }"><br><br>
 
 
-
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
+<button id="Button04" onclick="decrypt()">Base 64 Decrypt</button>
 
-<input type=button value="decrypt" onclick="{
+<input type=button value="decrypt (Numbers)" id="Button05" onclick="{
   let myTemp = ''
-   myString = document.getElementById('myArea02').value.toLowerCase().split('')
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == '14040') {myTemp  = 'a'} 
-      if (myString[myLoop] == '63100') {myTemp  = 'b'} 
-      if (myString[myLoop] == '61090') {myTemp  = 'c'} 
-      if (myString[myLoop] == '80100') {myTemp  = 'd'}
-      if (myString[myLoop] == '17780') {myTemp  = 'e'} 
-      if (myString[myLoop] == '10136') {myTemp  = 'f'} 
-      if (myString[myLoop] == '12228') {myTemp  = 'g'} 
-      if (myString[myLoop] == '00230') {myTemp  = 'h'}
-      if (myString[myLoop] == '10110') {myTemp  = 'i'} 
-      if (myString[myLoop] == '21320') {myTemp  = 'j'} 
-      if (myString[myLoop] == '55504') {myTemp  = 'k'} 
-      if (myString[myLoop] == '02000') {myTemp  = 'l'}
-      if (myString[myLoop] == '20735') {myTemp  = 'm'} 
-      if (myString[myLoop] == '00842') {myTemp  = 'n'}
-      if (myString[myLoop] == '00000') {myTemp  = 'o'} 
-      if (myString[myLoop] == '09850') {myTemp  = 'p'}
-      if (myString[myLoop] == '00835') {myTemp  = 'q'} 
-      if (myString[myLoop] == '01257') {myTemp  = 'r'} 
-      if (myString[myLoop] == '02730') {myTemp  = 's'} 
-      if (myString[myLoop] == '01874') {myTemp  = 't'}
-      if (myString[myLoop] == '11051') {myTemp  = 'u'} 
-      if (myString[myLoop] == '11023') {myTemp  = 'v'} 
-      if (myString[myLoop] == '00827') {myTemp  = 'w'} 
-      if (myString[myLoop] == '09421') {myTemp  = 'x'}
-      if (myString[myLoop] == '02673') {myTemp  = 'y'}
-      if (myString[myLoop] == '01240') {myTemp  = 'z'} 
-      if (myString[myLoop] == '08110') {myTemp  = '1'} 
-      if (myString[myLoop] == '88208') {myTemp  = '2'} 
-      if (myString[myLoop] == '19640') {myTemp  = '3'}
-      if (myString[myLoop] == '12032') {myTemp  = '4'} 
-      if (myString[myLoop] == '50330') {myTemp  = '5'}
-      if (myString[myLoop] == '01204') {myTemp  = '6'} 
-      if (myString[myLoop] == '00340') {myTemp  = '7'} 
-      if (myString[myLoop] == '30980') {myTemp  = '8'} 
-      if (myString[myLoop] == '04205') {myTemp  = '9'}
-      if (myString[myLoop] == '02403') {myTemp  = '!'}
-      if (myString[myLoop] == '03606') {myTemp  = '?'} 
-      if (myString[myLoop] == '02109') {myTemp  = '.'} 
-      if (myString[myLoop] == '03050') {myTemp  = ','} 
-      if (myString[myLoop] == '02060') {myTemp  = ':'}
-      if (myString[myLoop] == '10101') {myTemp  = '0'}
+      
+      if (myString[myLoop] == '1235') {myTemp  = 'a'} 
+      if (myString[myLoop] == '2874') {myTemp  = 'b'} 
+      if (myString[myLoop] == '1142') {myTemp  = 'c'} 
+      if (myString[myLoop] == '2124') {myTemp  = 'd'}
+      if (myString[myLoop] == '1573') {myTemp  = 'e'} 
+      if (myString[myLoop] == '2934') {myTemp  = 'f'} 
+      if (myString[myLoop] == '1354') {myTemp  = 'g'} 
+      if (myString[myLoop] == '2663') {myTemp  = 'h'}
+      if (myString[myLoop] == '1452') {myTemp  = 'i'} 
+      if (myString[myLoop] == '2566') {myTemp  = 'j'} 
+      if (myString[myLoop] == '1883') {myTemp  = 'k'} 
+      if (myString[myLoop] == '2273') {myTemp  = 'l'}
+      if (myString[myLoop] == '1874') {myTemp  = 'm'} 
+      if (myString[myLoop] == '1906') {myTemp  = 'n'}
+      if (myString[myLoop] == '2100') {myTemp  = 'o'} 
+      if (myString[myLoop] == '1002') {myTemp  = 'p'}
+      if (myString[myLoop] == '2754') {myTemp  = 'q'} 
+      if (myString[myLoop] == '1617') {myTemp  = 'r'} 
+      if (myString[myLoop] == '2254') {myTemp  = 's'} 
+      if (myString[myLoop] == '1776') {myTemp  = 't'}
+      if (myString[myLoop] == '2846') {myTemp  = 'u'} 
+      if (myString[myLoop] == '1213') {myTemp  = 'v'} 
+      if (myString[myLoop] == '2332') {myTemp  = 'w'} 
+      if (myString[myLoop] == '1168') {myTemp  = 'x'}
+      if (myString[myLoop] == '2464') {myTemp  = 'y'}
+      if (myString[myLoop] == '1121') {myTemp  = 'z'} 
+      if (myString[myLoop] == '2111') {myTemp  = '!'}
+      if (myString[myLoop] == '1876') {myTemp  = '?'} 
+      if (myString[myLoop] == '2008') {myTemp  = '.'} 
+      if (myString[myLoop] == '1531') {myTemp  = ','} 
+      if (myString[myLoop] == '2997') {myTemp  = ':'}
+  
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea03').value = myString.join('')
+}">
+<input type=button value="decrypt (Letters)" id="Button06" onclick="{
+  let myTemp = ''
+   myString = document.getElementById('myArea02').value.toLowerCase().split('')
+   
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      
+      if (myString[myLoop] == 'q') {myTemp  = 'a'} 
+      if (myString[myLoop] == 'a') {myTemp  = 'b'} 
+      if (myString[myLoop] == 'z') {myTemp  = 'c'} 
+      if (myString[myLoop] == 'w') {myTemp  = 'd'}
+      if (myString[myLoop] == 's') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'x') {myTemp  = 'f'} 
+      if (myString[myLoop] == 'e') {myTemp  = 'g'} 
+      if (myString[myLoop] == 'd') {myTemp  = 'h'}
+      if (myString[myLoop] == 'c') {myTemp  = 'i'} 
+      if (myString[myLoop] == 'r') {myTemp  = 'j'} 
+      if (myString[myLoop] == 'f') {myTemp  = 'k'} 
+      if (myString[myLoop] == 'v') {myTemp  = 'l'}
+      if (myString[myLoop] == 't') {myTemp  = 'm'} 
+      if (myString[myLoop] == 'g') {myTemp  = 'n'}
+      if (myString[myLoop] == 'b') {myTemp  = 'o'} 
+      if (myString[myLoop] == 'y') {myTemp  = 'p'}
+      if (myString[myLoop] == 'h') {myTemp  = 'q'} 
+      if (myString[myLoop] == 'n') {myTemp  = 'r'} 
+      if (myString[myLoop] == 'u') {myTemp  = 's'} 
+      if (myString[myLoop] == 'j') {myTemp  = 't'}
+      if (myString[myLoop] == 'm') {myTemp  = 'u'} 
+      if (myString[myLoop] == 'i') {myTemp  = 'v'} 
+      if (myString[myLoop] == 'k') {myTemp  = 'w'} 
+      if (myString[myLoop] == 'o') {myTemp  = 'x'}
+      if (myString[myLoop] == 'l') {myTemp  = 'y'}
+      if (myString[myLoop] == 'p') {myTemp  = 'z'} 
+      if (myString[myLoop] == '?') {myTemp  = '!'}
+      if (myString[myLoop] == '!') {myTemp  = '?'} 
+      if (myString[myLoop] == ',') {myTemp  = '.'} 
+      if (myString[myLoop] == ':') {myTemp  = ','} 
+      if (myString[myLoop] == '.') {myTemp  = ':'}
   
       myString[myLoop] = myTemp
    }
@@ -112,4 +178,375 @@
 }"><br><br>
 
 
-<textarea id="myArea03" rows=4 cols=70></textarea><br> 
+<textarea id="myArea03" rows=4 cols=70></textarea><br>
+<span>
+  
+</span>
+<script>
+  
+    var base64 = "SGVsbG8gV29ybGQh";
+
+    var text = atob(base64);
+   
+    document.write();
+
+</script>
+
+
+
+<script>
+    function encrypt() {
+        var text = document.getElementById("myArea01").value;
+        var base64 = btoa(text);
+        document.getElementById("myArea02").value = base64;
+    }
+    function decrypt() {
+    
+        var base64 = document.getElementById("myArea02").value;
+
+        var text = atob(base64);
+ 
+        document.getElementById("myArea03").value = text;
+    }
+</script>
+<style>
+#myArea01{
+  background: black;
+  border-color: white;
+  color: transparent;
+          animation: colorchange02 5s infinite;
+         
+        }
+        @keyframes colorchange02 {
+          0%, 25% { color: green;}
+          25%, 30% { color: lime;}
+          30%, 55% { color: green;}
+          55%, 100% { color: lime;}
+          
+        
+      
+      
+    }
+    }
+  
+}
+
+
+</style>
+<style>
+#myArea02{
+  background: black;
+  border-color: white;
+  color: transparent;
+          animation: colorchange04 5s infinite;
+         
+        }
+        @keyframes colorchange04 {
+          0%, 25% { color: purple;}
+          25%, 30% { color: magenta;}
+          30%, 55% { color: purple;}
+          55%, 100% { color: magenta;}
+          
+        
+      
+      
+    }
+    }
+  
+}
+
+
+</style>
+<style>
+#myArea03{
+  background: black;
+  border-color: white;
+  color: transparent;
+          animation: colorchange03 5s infinite;
+         
+        }
+        @keyframes colorchange03 {
+          0%, 25% { color: maroon;}
+          25%, 30% { color: red;}
+          30%, 55% { color: maroon;}
+          55%, 100% { color: red;}
+          
+        
+      
+      
+    }
+    }
+  
+}
+
+
+</style>
+<style>
+    body{
+    
+    background: linear-gradient(grey, black);
+        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+    }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          25%, 30% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+          30%, 55% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          55%, 100% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+        #Button01{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button01:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+         <style>
+        #Button02{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button02:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://i.pinimg.com/originals/88/15/c1/8815c1530ba8b997d50d365e5875d1d7.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+         <style>
+        #Button03{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button03:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+         <style>
+        #Button04{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button04:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+         <style>
+        #Button05{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button05:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+         <style>
+        #Button06{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #Button06:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+ <style>
+#rainbow{
+   color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://67.media.tumblr.com/e8037f0e4ea3a0a7160e743b824bc352/tumblr_nglg6pFHLy1s6fchho1_400.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+}
+</style>
+<style>
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+                                                    <style>
+#box02{
+background: url("https://thumbs.gfycat.com/BreakableHappyAndalusianhorse-size_restricted.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+                                                                                      <style>
+#box03{
+background: url("https://preview.redd.it/l8wvajj296c11.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
