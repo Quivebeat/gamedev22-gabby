@@ -2,6 +2,17 @@
 <h1 align=center>t2a06-spy-gabby.html</h1>
 <textarea id="myArea01" rows=4 cols=70>The Quick Brown Fox Jumps Over The Lazy Dog numbers dont work</textarea><br> 
 
+<input type=button value="encrypt (Ellis)"  id="ButtonE" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'e') {myTemp  = 'f'} 
+      if (myString[myLoop] == 'h') {myTemp  = 'i'} 
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea02').value = myString.join('')
+}">
 <button id="Button01" onclick="encrypt()">Base 64 Encypt</button>
 <input type=button value="encrypt (Numbers)" id="Button02" onclick="{
    let myTemp = ''
@@ -88,6 +99,17 @@
 
 
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
+<input type=button value="decrypt (Ellis)"  id="ButtonE2" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'f') {myTemp  = 'e'} 
+      if (myString[myLoop] == 'i') {myTemp  = 'h'} 
+      myString[myLoop] = myTemp
+   }
+   document.getElementById('myArea03').value = myString.join('')
+}">
 <button id="Button04" onclick="decrypt()">Base 64 Decrypt</button>
 
 <input type=button value="decrypt (Numbers)" id="Button05" onclick="{
@@ -490,6 +512,68 @@
        
     }
     #Button06:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+                 <style>
+        #ButtonE{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #ButtonE:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100% { color: white ;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
+                 <style>
+        #ButtonE2{
+          background: black;
+          animation: Buttonanim 1s infinite;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://media.giphy.com/media/smzfl3E7a4iHK/giphy.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    #ButtonE2:hover{ 
     animation: Buttonanimclick 1s linear forwards;
    }
    @keyframes Buttonanimclick {
