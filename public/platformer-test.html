@@ -10,6 +10,7 @@
    let myGlobalX = 0
    let myClock01
    let myClock02
+   let myClock03
    let myScore = 3
 
 
@@ -67,7 +68,7 @@ function myCheckHit(){
   // you LOSE refresh the page
    if (myScore <= 0){
     document.all.myText01.value = 'You Lose scrore at zero!'  
-    alert('Sorry you lose')
+    alert('lmao imagine')
     location.reload()
    }
 
@@ -138,59 +139,61 @@ if (myShooting == 1){
 
 
 <h1 align=center><font color=Yellow>Testplace gabby</font></h1>
-
-<h1>
+<h5>
 PRESS K to use your friendly slices to say hi to the angry therapists!
-</h1>
-<h2>
+</h5>
+<h5>
 Touch the dancing guy to WIN!!!111!!11!!!1z11!!!!1!
-</h2>
+</h5>
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
 
+<input type=button value="Background Left" onclick="{
+      myTemp = '100px 0px'
+      myGlobalX -= 5
+      myTemp =  myGlobalX + '0px 0px'
+      document.getElementById('myBody').style.backgroundPosition =myTemp
+    }">
+
 <input type=button value="Auto Background Left" onclick="{
+  clearInterval(myClock01)
   clearInterval(myClock02)
   let myTemp = '100px 0px'
   myClock01 = setInterval(function(){
       myGlobalX -= 5
-      myTemp =  myGlobalX + 'px 0px'
+      myTemp =  myGlobalX + '0px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
   }, 100)
     
 }">
-<input type=button value="Auto Background Right" onclick="{
+<input type=button value="Stop background" onclick="{
+  clearInterval(myClock02)
   clearInterval(myClock01)
-  let myTemp = '-100px 0px'
-  myClock02 = setInterval(function(){
-      myGlobalX = 5
-      myTemp =  myGlobalX + 'px 0px'
+  let myTemp = '0px 0px'
+  myClock01 = setInterval(function(){
+      myGlobalX = 0
+      myTemp =  myGlobalX + '0px 0px'
       document.getElementById('myBody').style.backgroundPosition = myTemp
-  }, -100)
+  }, 0)
     
 }">
 
-
-<input type=button value="Right" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.right = parseInt(document.getElementById('myImg01').style.right) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
+<input type=button value="Auto Background Right" onclick="{
+  clearInterval(myClock01)
+  clearInterval(myClock02)
+  let myTemp = '0px 100px'
+  myClock02 = setInterval(function(){
+      myGlobalX -= -5
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp
+  }, -100)     
 }">
 
-<input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.bottom = parseInt(document.getElementById('myImg01').style.bottom) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}">
-<input type=button value="Left" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
-<input type=button value="Up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
-  myCheckHit()     // checks for all collisions
-  
- 
-}">
-
-
-
+<input type=button value="Background Right" onclick="{
+      myTemp = '100px 0px'
+      myGlobalX -= -5
+      myTemp =  myGlobalX + '0px 0px'
+      document.getElementById('myBody').style.backgroundPosition =myTemp
+    }">
 
 
 <img id="myImg01" src="https://piskel-imgstore-b.appspot.com/img/55257800-6793-11ed-a33f-9b6493aa8050.gif"  style="position:absolute; width:100px; height:80px; left: 35px; top:190px;">
