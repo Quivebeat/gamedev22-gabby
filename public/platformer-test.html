@@ -38,6 +38,8 @@ function myCheckHit(){
 
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '5px'
+      document.getElementById('myImg05').style.left = '5px'
+      document.getElementById('myImg07').style.left = '5px'
       document.all.myText01.value = 'You hit myImg02'  
       myScore -= 1
    }   
@@ -45,6 +47,8 @@ function myCheckHit(){
    if ( myHitOther('myImg01','myImg03') ){
        //alert('you lose')
       document.getElementById('myImg01').style.left = '5px'
+      document.getElementById('myImg05').style.left = '5px'
+      document.getElementById('myImg07').style.left = '5px'
       document.all.myText01.value = 'You hit myImg03'  
       myScore -= 1
    }   
@@ -55,6 +59,10 @@ function myCheckHit(){
       document.getElementById('myBullet01').style.left = '-200px'
       document.all.myText01.value = 'You shot myImg03'  
       myScore += 1
+      document.getElementById('myImg03').style.visibility='hidden';
+      document.getElementById('myImg06').style.visibility='visible';
+      myImg06.src = myImg06.src.replace(/\?.*$/,"")+"?x="+Math.random();
+      
    }   
    
    if ( myHitOther('myBullet02','myImg03') ){
@@ -62,6 +70,9 @@ function myCheckHit(){
       document.getElementById('myBullet02').style.left = '-200px'
       document.all.myText01.value = 'You shot myImg03'  
       myScore += 1
+      document.getElementById('myImg03').style.visibility='hidden';
+      document.getElementById('myImg06').style.visibility='visible';
+      myImg06.src = myImg06.src.replace(/\?.*$/,"")+"?x="+Math.random();
    }   
    
    
@@ -95,16 +106,33 @@ function myCheckHit(){
    document.all.myText01.value = event.key
    if (event.key == 'd') {  // d = go right
      document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+     document.getElementById('myImg05').style.left = parseInt(document.getElementById('myImg05').style.left) + 10 + 'px'
+     document.getElementById('myImg07').style.left = parseInt(document.getElementById('myImg07').style.left) + 10 + 'px'
+     document.getElementById('myImg05').style.visibility='hidden';
+      document.getElementById('myImg01').style.visibility='visible';
+      document.getElementById('myImg07').style.visibility='hidden'; 
    }   
    if (event.key == 's') {   // s = go down
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+      document.getElementById('myImg05').style.top = parseInt(document.getElementById('myImg05').style.top) + 10 + 'px'
+      document.getElementById('myImg07').style.top = parseInt(document.getElementById('myImg07').style.top) + 10 + 'px'
+      document.getElementById('myImg05').style.visibility='hidden';
+      
    }  
    if (event.key == 'a') {   // a = go left
       document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -10 + 'px'
+      document.getElementById('myImg05').style.left = parseInt(document.getElementById('myImg05').style.left) + -10 + 'px'
+      document.getElementById('myImg07').style.left = parseInt(document.getElementById('myImg07').style.left) + -10 + 'px'
+      document.getElementById('myImg05').style.visibility='hidden';
+      document.getElementById('myImg01').style.visibility='hidden';
+      document.getElementById('myImg07').style.visibility='visible'; 
       }
       if (event.key == 'w') {   // w = go up
       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
-      }
+      document.getElementById('myImg05').style.top = parseInt(document.getElementById('myImg05').style.top) + -10 + 'px'
+      document.getElementById('myImg07').style.top = parseInt(document.getElementById('myImg05').style.top) + -10 + 'px'
+      document.getElementById('myImg05').style.visibility='hidden';
+     }
       if (event.key == 'k'){
 if (myShooting > 2 ){myShooting = 1}
   // Bullet Number 2
@@ -128,8 +156,13 @@ if (myShooting == 1){
      document.getElementById('myBullet01').style.left = parseInt(document.getElementById('myBullet01').style.left) + 10 + 'px'
      myCheckHit() 
   }, 1)   // speed of bullet faster lower number
-}
+  }
+     document.getElementById('myImg01').style.visibility='hidden'; 
+     document.getElementById('myImg07').style.visibility='hidden'; 
+      document.getElementById('myImg05').style.visibility='visible';
+      
       }
+      
    // put more here
   myCheckHit()     // checks for all collisions
 }">
@@ -194,16 +227,22 @@ Touch the dancing guy to WIN!!!111!!11!!!1z11!!!!1!
       myTemp =  myGlobalX + '0px 0px'
       document.getElementById('myBody').style.backgroundPosition =myTemp
     }">
+    <input type=button value="Reset Sprites" onclick="{
+    document.getElementById('myImg06').style.visibility='hidden';
+      document.getElementById('myImg03').style.visibility='visible';
+    }">
 
 
-<img id="myImg01" src="https://piskel-imgstore-b.appspot.com/img/55257800-6793-11ed-a33f-9b6493aa8050.gif"  style="position:absolute; width:100px; height:80px; left: 35px; top:190px;">
+<img id="myImg01" src="https://piskel-imgstore-b.appspot.com/img/731743ca-6dd8-11ed-8f48-b1dc9f2006bc.gif"  style="position:absolute; width:70px; height:70px; left: 50px; top:200px;">
+<img id="myImg07" src="https://piskel-imgstore-b.appspot.com/img/cde4cd5e-6dd8-11ed-86f4-b1dc9f2006bc.gif"  style="position:absolute; width:70px; height:70px; left: 50px; top:200px;">
 
-<img id="myImgattack" src="https://piskel-imgstore-b.appspot.com/img/4f341f68-69ec-11ed-9b57-b3998d38cb4b.gif"  style="position:absolute; width:100px; height:80px; left: 35px; top:190px;">
+<img id="myImg05" src="https://piskel-imgstore-b.appspot.com/img/bae70ca3-6dd4-11ed-a7ad-b1dc9f2006bc.gif"  style="position:absolute; width:60px; height:60px; left: 65px; top:210px;">
 
+<img id="myImg06" src="https://piskel-imgstore-b.appspot.com/img/e16f267a-6dd9-11ed-9606-b1dc9f2006bc.gif" style="position:absolute; width:px; height:80px; left:500px; top:190px;">
 
 <img id="myImg02" src="https://piskel-imgstore-b.appspot.com/img/01a51a42-69ef-11ed-ac81-b3998d38cb4b.gif"  style="position:absolute; width:75px; height:80px; left:350px; top:190px;">
-<img id="myImg03" src="https://media.tenor.com/images/059dab409ba6a22fe350c6df3304faea/tenor.gif"  style="position:absolute; width:75px; height:80px; left:500px; top:190px;">
-<img id="myImg04" src="https://media.tenor.com/images/0a8faa1b0adec1be0a8813b4c578a837/tenor.gif"  style="position:absolute; width:75px; height:90px; left:450px; top:400px;">
+<img id="myImg03" src="https://piskel-imgstore-b.appspot.com/img/01a51a42-69ef-11ed-ac81-b3998d38cb4b.gif"  style="position:absolute; width:75px; height:80px; left:500px; top:190px;">
+<img id="myImg04" src="https://piskel-imgstore-b.appspot.com/img/8bd6d6ca-6ddd-11ed-a732-b1dc9f2006bc.gif"  style="position:absolute; width:90px; height:90px; left:450px; top:400px;">
 <img id="myBullet01" src="https://piskel-imgstore-b.appspot.com/img/28e5ab1e-69e8-11ed-bd90-3d76eb6cc82b.gif"  style="position:absolute; width:100px; height:100px; left: 130px; top:190px;">
 <img id="myBullet02" src="https://piskel-imgstore-b.appspot.com/img/28e5ab1e-69e8-11ed-bd90-3d76eb6cc82b.gif"  style="position:absolute; width:100px; height:100px; left: 150px; top:190px;">
 <style>
