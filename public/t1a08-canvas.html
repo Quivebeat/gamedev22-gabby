@@ -1,23 +1,61 @@
-<h2 align=center>t2a08-canvas by Fred</h2>
+<h2 align=center>t2a08-canvas</h2>
 You use loops and variables to make fast fancy drawings <br><br>
 
-<input type=button value=".lineTo(30,200)" onclick="{
+<input type=button id="Button01" value=".lineTo(30,200)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 1;   
    myContext.moveTo(20,10);
    myContext.lineTo(30,200);
    myContext.stroke();
 }">
-
-<input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
+<input type=button id="Button01" value="Triangle" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(20,10);
+   myContext.lineTo(22,200);
+   myContext.lineTo(200,200);
+   myContext.lineTo(19,9);
+   myContext.stroke();
+}">
+<input type=button id="Button01" value="Triangle fill (click twice)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(20,10);
+   myContext.lineTo(22,200);
+   myContext.lineTo(200,200);
+   myContext.lineTo(19,9);
+   myContext.fill();
+   myContext.fillStyle = 'blue';
+   myContext.stroke();
+   }">
+   <input type=button id="Button01" value="Triangle colour" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.moveTo(20,10);
+   myContext.lineTo(22,200);
+   myContext.lineTo(200,200);
+   myContext.lineTo(19,9);
+   myContext.strokeStyle = 'green';
+   myContext.stroke();
+   }">
+<input type=button id="Button01" value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
    myContext.beginPath();
    myContext.lineWidth = 10;
    myContext.strokeStyle = 'green';
    myContext.arc(95, 50, 40, 0, 2 * Math.PI);
    myContext.stroke();
 }">
+<input type=button id="Button01" value="Fill Circle" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 5;
+   myContext.strokeStyle = 'green';
+   myContext.arc(500, 50, 40, 0, 2 * Math.PI);
+   myContext.fill();
+   myContext.fillStyle = 'black';
+   myContext.stroke();
+}">
 
-<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+<input type=button id="Button01" value=".fillText('Hello World', 400, 100)" onclick="{
    myContext.font = '20px Arial';
    myContext.fillText('Hello World', 400, 100);
    myContext.translate(400, 100);  
@@ -27,8 +65,26 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.resetTransform();  
    //myContext.rotate(-60 * Math.PI / 180); 
 }">
+<input type=button id="Button01" value="Giant Hello World" onclick="{
+   myContext.font = '100px Arial';
+   myContext.fillText('Hello World!!!111!', 400, 100);
+   myContext.fillText('Hello World!!!111!', 400, 200);
+   myContext.fillText('Hello World!!!111!', 400, 300);
+   myContext.fillText('Hello World!!!111!', 400, 400);
+   myContext.fillText('Hello World!!!111!', 400, 500);
+   myContext.fillText('Hello World!!!111!', 400, 600);
+   myContext.fillText('Hello World!!!111!', 0, 100);
+   myContext.fillText('Hello World!!!111!', 0, 200);
+   myContext.fillText('Hello World!!!111!', 0, 300);
+   myContext.fillText('Hello World!!!111!', 0, 400);
+   myContext.fillText('Hello World!!!111!', 0, 500);
+   myContext.fillText('Hello World!!!111!', 0, 600);
+   myContext.translate(400, 100);  
+   myContext.stroke();
+   myContext.resetTransform();  
+}">
 
-<input type=button value=".quadraticCurveTo(100,220,240,110)" onclick="{
+<input type=button  id="Button01" value=".quadraticCurveTo(100,220,240,110)" onclick="{
    myContext.beginPath();
    myContext.moveTo(300,100);
    myContext.quadraticCurveTo(100,220,240,110);
@@ -37,7 +93,7 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 
 
-<input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
+<input type=button id="Button01" value=".createLinearGradient(100, 300, 200, 400)" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
    myGradient.addColorStop(0, 'red');
    myGradient.addColorStop(0.5, 'blue');
@@ -48,11 +104,11 @@ You use loops and variables to make fast fancy drawings <br><br>
    myContext.fillStyle = 'black';
 }"><br><br>
 
-<input type=button value="clearRect(20, 20, 50, 50)" onclick="{
+<input type=button id="Button01" value="clearRect(20, 20, 50, 50)" onclick="{
    myContext.clearRect(20, 20, 50, 50);
 }">
 
-<input type=button value="Clear all" onclick="{
+<input type=button id="Button01" value="Clear all" onclick="{
    myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
 }"><br><br>
 
@@ -63,3 +119,93 @@ You use loops and variables to make fast fancy drawings <br><br>
    let myCanvas=document.getElementById('myCoolTag');
    let myContext=myCanvas.getContext('2d');
 </script>
+
+
+<style>
+    body{
+    
+    background: linear-gradient(black, gray);
+        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+    }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          25%, 30% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+          30%, 55% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          55%, 100% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://i.pinimg.com/originals/88/15/c1/8815c1530ba8b997d50d365e5875d1d7.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+ <style>
+#rainbow{
+   color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://67.media.tumblr.com/e8037f0e4ea3a0a7160e743b824bc352/tumblr_nglg6pFHLy1s6fchho1_400.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+}
+</style>
+<style>
+        #Button01{
+          background: black;
+          animation: Buttonanim 1s infinite;
+          color: white;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif");}
+        
+       
+    }
+    #Button01:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100%{ background: transparent; url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif")-webkit-background-clip: text;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
