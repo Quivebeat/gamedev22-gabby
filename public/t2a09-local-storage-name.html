@@ -1,24 +1,70 @@
-<h2>t2a09-local-storage-name by Fred. Instructions:</h2>
+<script>
+function myFunction01(){
+let myVal01 = document.getElementById('myText01').value
+let myVal02 = document.getElementById('myText02').value
+let myReply = 'Your stored texts are...' + myVal01 +  'and' + myVal02
+return myReply
+}
+
+
+
+</script>
+
+
+
 
 <body onload="{
    myStorage = localStorage.getItem('myStoredText')
    if(myStorage  != null){
-      document.getElementById('myText1').value = myStorage 
+      document.getElementById('myText01').value = myStorage 
     }
 }">
 
 <body onunload="{
-   localstorage.setItem('myStoredText',document.getElementById('myText1').value)
+   localstorage.setItem('myStoredText',document.getElementById('myText01').value)
 }">   
 
-Text example: <input id="myText1" type=text size=70 value="" placeholder="Write here to store"><br>
+Text example: <input id="myText01" type=text size=70 value="" placeholder="Write here to store"><br>
 
 <input type="button" value="Store Text" onClick="{
-   localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   document.getElementById('myText1').value = ''
+   localStorage.setItem('myStoredText', document.getElementById('myText01').value)
+   document.getElementById('myText01').value = ''
 }">
 
 
 <input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
+   document.getElementById('myText01').value = localStorage.getItem('myStoredText')
 }"> 
+<br>
+<br>
+<body onload="{
+   myStorage02 = localStorage.getItem('myStoredText02')
+   if(myStorage02  != null){
+      document.getElementById('myText02').value = myStorage02
+    }
+}">
+<body onunload="{
+   localstorage.setItem('myStoredText2',document.getElementById('myText02').value)
+}">   
+
+input more text here <input id="myText02" type=text size=70 value="" placeholder="Write here to store"><br>
+
+<input type="button" value="Store Text" onClick="{
+   localStorage.setItem('myStoredText2', document.getElementById('myText02').value)
+   document.getElementById('myText02').value = ''
+}">
+
+
+<input type="button" value="Retrieve Text" onClick="{
+   document.getElementById('myText02').value = localStorage.getItem('myStoredText02')
+}"> 
+<br>
+<br>
+
+<input type="button" value="retrieve both texts" onClick="{
+document.getElementById('myDiv01').innerHTML = myFunction01()
+
+}">
+<div id="myDiv01">
+...
+</div>
