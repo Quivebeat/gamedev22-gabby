@@ -6,6 +6,8 @@
    let myGun03
    let myGun04
    let myShooting = 1
+     let mySound3 = new Audio('https://quivebeat.github.io/gamedev22-gabby/public/My Song 12.m4a')
+     let mySound5 = new Audio('https://quivebeat.github.io/gamedev22-gabby/public/0 lives.m4a')
 
    let myGlobalX = 0
    let myClock01
@@ -78,9 +80,11 @@ function myCheckHit(){
    
   // you LOSE refresh the page
    if (myScore <= 0){
-    document.all.myText01.value = 'You Lose scrore at zero!'  
+    document.all.myText01.value = 'You Lose scrore at zero!' 
+    mySound5.play()
     alert('lmao imagine')
     location.reload()
+    
    }
 
    // YOU WIN and go to next level!
@@ -179,7 +183,9 @@ PRESS K to use your friendly slices to say hi to the angry therapists!
 Touch the dancing guy to WIN!!!111!!11!!!1z11!!!!1!
 </h5>
 <input id="myText01" type=text value="" size=50 placeholder="Feedback here"><br>
-
+<input type=button value="Play Music" onClick="{
+    mySound3.play()
+}">
 <input type=button value="Background Left" onclick="{
       myTemp = '100px 0px'
       myGlobalX -= 5
