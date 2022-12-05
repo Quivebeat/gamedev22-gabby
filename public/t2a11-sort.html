@@ -6,7 +6,7 @@
     }
 
     function generateNumbers() {
-        document.getElementById("result").innerHTML = "Numbers have been generated";
+        document.getElementById("result").innerHTML = "Generated some Numbers."
 
         document.getElementById("generate").disabled = true;
         document.getElementById("sort").disabled = false;
@@ -21,7 +21,7 @@
     }
 
     function sortNumbers() {
-        document.getElementById("result").innerHTML = "Numbers have been sorted";
+        document.getElementById("result").innerHTML = "Sorted Numbers."
         document.getElementById("sort").disabled = true;
         document.getElementById("reset").disabled = false;
 
@@ -44,18 +44,18 @@
         document.getElementById("generate").disabled = false;
         document.getElementById("sort").disabled = true;
         document.getElementById("reset").disabled = true;
-        document.getElementById("result").innerHTML = "Numbers Have Been Reset";
+        document.getElementById("result").innerHTML = "Resetted Numbers.";
 
         
 
     }
 </script>
-<h1> Use Buttons Below To Generate 20 Random Numbers 0-52</h1>
-<p id="result">Click Generate Numbers To Start</p>
+<h1> Generate Numberss</h1>
+<p id="result">Click the left-most button to begin.</p>
 <body onload="init()"></body>
-<button id="generate" onclick="generateNumbers()">Generate Numbers</button>
-<button id="sort" onclick="sortNumbers()">Sort Numbers</button> 
-<button id="reset" onclick="reset()">Reset</button>
+<button id="generate" onclick="generateNumbers()">Generate new Numbers</button>
+<button id="sort" onclick="sortNumbers()">Sort the Numbers</button> 
+<button id="reset" onclick="reset()">Reset Numbers</button>
 <BR> <BR> <BR>  
 
 <div id="numbers"></div>
@@ -69,9 +69,9 @@
     
     BODY{
         background-color: #f2f2f2;
-        BORDER: 3px solid #000000;
-        border-radius: 10px;
-        
+        BORDER: 3px solid black;
+        border-radius: 1px;
+        height: 275px;
         font-family: 'Poppins', sans-serif;
         FONT-SIZE: 12px;
         COLOR: #000000;
@@ -80,7 +80,6 @@
 
     }
     #numbers {
-        border: #000000 1px solid;
         width: auto;
         height: auto;
         padding: 5px;
@@ -90,11 +89,127 @@
     }
     #sortedNumbers {
         float: left;
-        border: #000000 1px solid;
         width: auto;
         height: auto;
         padding: 5px;
         margin-left: 200px;
         text-align: center;
     }
+</style>
+<style>
+    body{
+    
+    background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");
+    background-repeat: no-repeat;
+        text-align: center;
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        font-family: 'Share Tech Mono', monospace;
+        color: white;
+    }
+    a{
+          
+          color: transparent;
+          animation: colorchange 1s infinite;
+         
+        }
+        @keyframes colorchange {
+          0%, 25% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          25%, 30% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+          30%, 55% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif");-webkit-background-clip: text;}
+          55%, 100% { background: url("https://media1.tenor.com/images/d982c7d6cc222f4f70c97fc0ea5f2f28/tenor.gif"); -webkit-background-clip: text;}
+        
+      
+      
+    }
+    }
+        </style>
+        <style>
+           a:hover {
+      color: transparent;
+      animation: backgroundanim 1s infinite;
+
+    }
+    @keyframes backgroundanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://i.pinimg.com/originals/88/15/c1/8815c1530ba8b997d50d365e5875d1d7.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+
+        </style>
+ <style>
+#rainbow{
+   color: transparent;
+      animation: backgroundanim02 1s infinite;
+
+    }
+    @keyframes backgroundanim02 {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://67.media.tumblr.com/e8037f0e4ea3a0a7160e743b824bc352/tumblr_nglg6pFHLy1s6fchho1_400.gif") ;-webkit-background-clip: text;}
+        
+       
+    }
+    }
+}
+</style>
+<style>
+#box{
+background-color: black;
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+                                                    <style>
+#box02{
+background: url("https://thumbs.gfycat.com/BreakableHappyAndalusianhorse-size_restricted.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+                                                                                      <style>
+#box03{
+background: url("https://preview.redd.it/l8wvajj296c11.gif");
+border-radius: 0px; 
+padding: 10px; 
+margin: 1px;
+
+}
+</style>
+<style>
+        #Button01{
+          background: black;
+          animation: Buttonanim 1s infinite;
+          color: white;
+         
+          }
+    @keyframes Buttonanim {
+       0% { background: transparent;-webkit-background-clip: text;}
+      0%, 100% { background: url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif");}
+        
+       
+    }
+    #Button01:hover{ 
+    animation: Buttonanimclick 1s linear forwards;
+   }
+   @keyframes Buttonanimclick {
+      
+       0%, 50% { background: transparent;-webkit-background-clip: text;}
+       0%, 50% { color: black ;}
+       100%{ background: transparent; url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif")-webkit-background-clip: text;}
+       
+       0%, 50% { background: white;}
+      75%, 100% { background: url("https://thumbs.gfycat.com/BoringBlackDungenesscrab-size_restricted.gif");}
+    
+    
+    }
+    }
+    
+        
+        
+        </style>
 </style>
